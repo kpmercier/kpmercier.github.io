@@ -30,6 +30,7 @@ twitter_username: kpmercier
 github_username:  kpmercier
 
 # Build settings
+github: [metadata]
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
