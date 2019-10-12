@@ -20,20 +20,27 @@
 
 title: Kathryn P. Mercier
 email: kmercier@gc.cuny.edu
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# Short bio or description (displayed in the header)
+description: Biogeography, Evolution, Conservation
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://raw.githubusercontent.com/kpmercier/kpmercier.github.io/master/images/profile.png
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "www.kpmercier.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kpmercier
 github_username:  kpmercier
 
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: kpmercier
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-125399965-1
+
 # Build settings
 github: [metadata]
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
