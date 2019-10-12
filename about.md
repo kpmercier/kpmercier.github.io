@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<img style="float: right;" src="/images/me_coverboard.png">
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Welcome to my new website! I am a PhD student in the <a href="http://www.carnavallab.org/">Carnaval Lab</a> at City 
+College of New York and CUNY Graduate Center. I am broadly interested in understanding 
+the drivers of diversity using a combination of approaches. I am especially interested 
+in using information about the historical effects of climate to make inferences about 
+how current climate change will effect species.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I received my MS from the University of Central Florida in the 
+<a href="parkinsonlab.com">Parkinson Lab</a>.  My thesis research used statistical 
+phylogeography to test hypotheses about the historical dispersal of mole skinks 
+<i>Plestiodon egregius</i>. 
