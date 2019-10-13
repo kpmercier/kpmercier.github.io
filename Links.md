@@ -3,6 +3,9 @@ layout: page
 title: Links & other fun stuff
 permalink: /Links/
 ---
+
+<img src="/images/PCRmagic.jpg" alt="alt text" width="350" align="right">
+
 ### Some interesting links
 
 [Advice for applying to PhD programs](https://medium.com/@caseywdunn/applying-to-biology-phd-programs-58abece3284a)

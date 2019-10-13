@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Command Line Workshop
-permalink: /CLworkshop/
+title: Workshop
+permalink: /Links/CLworkshop/
+published: False
 ---
 
 ### Welcome to the ITP Skills Labs for the Command Line!
