@@ -43,6 +43,8 @@ $ pwd
 
 ### File System
 
+![File System](Filesystem_tree.png)
+
 ```bash
 # The root (top) of the entire filesystem (used for writing full paths).
 /
