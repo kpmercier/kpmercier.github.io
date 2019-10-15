@@ -59,8 +59,16 @@ $ ls -l ./
 # show another location on the filesystem
 $ ls -l /bin/
 
-  # move to a new location. This becomes your new cur dir.
-  $ cd folder/
+# move to a new location. This becomes your new cur dir.
+$ cd folder/
+```
+```bash
+# make a new directory (mkdir is the program, genomics is the target)
+$ mkdir genomics
+
+# change directory (move) into the new directory and run pwd again
+$ cd genomics
+$ pwd
 ```
 
 ## How to find resources to enhace your personal toolkit
