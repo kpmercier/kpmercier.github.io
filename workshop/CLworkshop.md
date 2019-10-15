@@ -49,10 +49,10 @@ $ pwd
 $ ls 
 ```
 
-You can find information about programs, including its options and arguments.
+You can find information about programs, including its options and arguments, using the help option
 
 ```bash
-# Running a program with the -h option (short for 'help') will print information on that programs use
+# Running a program with the -h option (short for 'help') will print information on that programs usage
 $ ls -h
 ```
 
@@ -83,7 +83,7 @@ $ ls ./
 $ ls -l /bin/
 ```
 
-What do you think the default argument for 'ls' is?
+_What do you think the default argument for 'ls' is?_
 
 Now, lets use a new command to move around the filesystem
 
@@ -115,3 +115,5 @@ $ pwd
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
 [Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
+
+[Code Academy, Learn the command line](https://www.codecademy.com/learn/learn-the-command-line)
