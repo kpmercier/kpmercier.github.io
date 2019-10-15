@@ -75,7 +75,7 @@ $ mkdir genomics
 $ cd genomics
 $ pwd
 ```
-[File system exercise](CLworkshop/FSexercise)
+[File system exercise](FSexercise/)
 
 ## How to find resources to enhace your personal toolkit
 
