@@ -6,7 +6,7 @@ permalink: /CLworkshop/
 
 28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
 
-This workshop has been modified from the [Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
+This lab has been modified from the [Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
 
 ## __Objectives__
 
