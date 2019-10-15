@@ -9,7 +9,7 @@ permalink: /CLworkshop/
 
 CUNY Graduate Center
 
-## Objectives
+------ Objectives
 
 1. Understand why the command line is useful
 2. Gain a basic toolkit to start using the command line
