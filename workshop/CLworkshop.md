@@ -102,13 +102,13 @@ $ cd genomics
 $ pwd
 ```
 
+[File system exercise](FSexercise/)
+
 ### _Working with files_
 
 ### _Shell scripts_
 
 ### _The last one_
-
-[File system exercise](FSexercise/)
 
 ## __3. Find resources to build your personal toolkit__
 
