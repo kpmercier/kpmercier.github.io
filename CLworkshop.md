@@ -4,9 +4,7 @@ permalink: /CLworkshop/
 ---
 
 # Welcome to the ITP Skills Labs for the Command Line!
-
 28 October 2019 \| Kathryn Mercier
-
 CUNY Graduate Center
 
 ------ Objectives
@@ -33,14 +31,14 @@ Lines beginning with # are comments and are not executed
 program -option1 -option2 target
 ```
 
-```
+```bash
 # The 'pwd' program with no option or target prints your current directory
 pwd
 ```
 
 ### File System
 
-```
+```bash
 # The root (top) of the entire filesystem (used for writing full paths).
 /
 
@@ -51,7 +49,7 @@ pwd
 ../
 ```
 
-```
+```bash
 # show the files and folders in a location (default target is cur dir)
 $ ls 
 
