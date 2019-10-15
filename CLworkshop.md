@@ -4,10 +4,9 @@ permalink: /CLworkshop/
 ---
 
 # Welcome to the ITP Skills Labs for the Command Line!
-28 October 2019 \| Kathryn Mercier
-CUNY Graduate Center
+28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
 
------- Objectives
+## __Objectives__
 
 1. Understand why the command line is useful
 2. Gain a basic toolkit to start using the command line
