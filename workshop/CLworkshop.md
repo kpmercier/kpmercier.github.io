@@ -28,20 +28,20 @@ Today, we will be using a Unix-based command line, used on Mac and Linux compute
 
 When you start up a terminal you will see a prompt
 
-```console
+```shell
 $ 
 ```
 
 Lines beginning with # are comments and are not executed. The command line is used to run programs, which may have options and arguements
 
-```console
+```shell
 # This is the general format of unix command line tools
 $ program -option1 -option2 argument
 ```
 
 Here is an example of two programs
 
-```console
+```shell
 # The 'pwd' program with no option or argument prints your current location
 $ pwd
 
@@ -51,7 +51,7 @@ $ ls
 
 You can find information about programs, including its options and arguments, using the help option
 
-```console
+```shell
 # Running a program with the -h option (short for 'help') will print information on that programs usage
 $ ls -h
 ```
@@ -64,7 +64,7 @@ _What is your current location and what files and folders are in that location?_
 
 We can use the command line to point to locations in the filesystem
 
-```console
+```shell
 # The root (top) of the entire filesystem (used for writing full paths).
 $ /
 
@@ -77,7 +77,7 @@ $ ../
 
 We can use the 'ls' command we learned to see files and folders in different locations in the filesystem
 
-```console
+```shell
 # Show files and folders in your current directory
 $ ls ./
 
@@ -89,13 +89,13 @@ _What do you think the default argument for 'ls' is?_
 
 Now, lets use a new command to move around the filesystem
 
-```console
+```shell
 # move to a new location. This becomes your new cur dir.
 $ cd folder/
 ```
 Additionally, we can make new folders in the filesystem
 
-```console
+```shell
 # make a new directory (mkdir is the program, genomics is the target)
 $ mkdir genomics
 
