@@ -28,7 +28,7 @@ listing, searching & moving batches of files; editing & running shell scripts.
 
 Lines beginning with # are comments and are not executed
 
-```
+```bash
 # This is the general format of unix command line tools
 program -option1 -option2 target
 ```
