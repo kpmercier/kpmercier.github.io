@@ -20,7 +20,7 @@ The command line is a tool to control your computer using a text interface. It w
 very useful if you are working with very large text data sets, or want to run the same
 process over and over again. 
 
-\n 
+/n 
 ## __Gain a basic toolkit to start using the command line__
 
 Skills we will cover in this workshop include: navigating & creating folders; 
