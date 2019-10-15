@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Workshop
-permalink: /Links/CLworkshop/
-published: False
+permalink: /CLworkshop/
 ---
 
 ### Welcome to the ITP Skills Labs for the Command Line!
@@ -21,3 +20,6 @@ listing, searching & moving batches of files; editing & running shell scripts.
 pwd
 ```
 
+More Resources - 
+
+[Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
