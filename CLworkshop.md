@@ -26,16 +26,22 @@ process over and over again.
 Skills we will cover in this workshop include: navigating & creating folders; 
 listing, searching & moving batches of files; editing & running shell scripts. 
 
+When you start up a terminal you will see a prompt
+
+```bash
+$ 
+```
+
 Lines beginning with # are comments and are not executed
 
 ```bash
 # This is the general format of unix command line tools
-program -option1 -option2 target
+$ program -option1 -option2 argument
 ```
 
 ```bash
-# The 'pwd' program with no option or target prints your current directory
-pwd
+# The 'pwd' program with no option or argument prints your current directory
+$ pwd
 ```
 
 ### File System
@@ -72,6 +78,7 @@ $ mkdir genomics
 $ cd genomics
 $ pwd
 ```
+[File system exercise](/FSexercise)
 
 ## How to find resources to enhace your personal toolkit
 
