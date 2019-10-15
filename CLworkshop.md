@@ -6,7 +6,9 @@ permalink: /CLworkshop/
 
 28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center 
 \
+
 \
+
 \
 ## __Objectives__
 
