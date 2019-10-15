@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Workshop
 permalink: /CLworkshop/
 ---
 
-### Welcome to the ITP Skills Labs for the Command Line!
+# Welcome to the ITP Skills Labs for the Command Line!
 
 28 October 2019 \| Kathryn Mercier
+
+CUNY Graduate Center
 
 ## Objectives
 
@@ -25,9 +26,43 @@ process over and over again.
 Skills we will cover in this workshop include: navigating & creating folders; 
 listing, searching & moving batches of files; editing & running shell scripts. 
 
+Lines beginning with # are comments and are not executed
+
 ```
-# This is a comment
+# This is the general format of unix command line tools
+program -option1 -option2 target
+```
+
+```
+# The 'pwd' program with no option or target prints your current directory
 pwd
+```
+
+### File System
+
+```
+# The root (top) of the entire filesystem (used for writing full paths).
+/
+
+# Here, in my current directory (used for writing relative paths).
+./
+
+# Up one directory from my current directory (a relative path).
+../
+```
+
+```
+# show the files and folders in a location (default target is cur dir)
+$ ls 
+
+# show result as a list for cur dir.
+$ ls -l ./
+
+# show another location on the filesystem
+$ ls -l /bin/
+
+  # move to a new location. This becomes your new cur dir.
+  $ cd folder/
 ```
 
 ## How to find resources to enhace your personal toolkit
