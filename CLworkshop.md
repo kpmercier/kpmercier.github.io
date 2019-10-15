@@ -4,11 +4,10 @@ title:  Welcome to the ITP Skills Labs for the Command Line!
 permalink: /CLworkshop/
 ---
 
-28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center 
-\
+28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
 
 \
-
+\
 \
 ## __Objectives__
 
