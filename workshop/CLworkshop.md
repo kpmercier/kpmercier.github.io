@@ -18,10 +18,11 @@ We have many ways of interacting with computers. We can use a mouse and keyboard
 
 While this is intuitive and works well most of the time, imagine the following scenario. For a literature search you want to find how often 
 
+Skills we will cover in this workshop include: navigating & creating folders; listing, searching & moving batches of files; editing & running shell scripts.
+
 ## __Gain a basic toolkit to start using the command line__
 
-Skills we will cover in this workshop include: navigating & creating folders; 
-listing, searching & moving batches of files; editing & running shell scripts. 
+### Fundamentals
 
 When you start up a terminal you will see a prompt
 
@@ -37,38 +38,50 @@ $ program -option1 -option2 argument
 ```
 
 ```bash
-# The 'pwd' program with no option or argument prints your current directory
+# The 'pwd' program with no option or argument prints your current location
 $ pwd
+
+# The 'ls' program with no option or argument prints the files and folders in your current location
+$ ls 
 ```
 
-### File System
+### The filesystem
 
 ![File System](Filesystem_tree.png)
 
+We can use the command line to point to locations in the filesystem
+
 ```bash
 # The root (top) of the entire filesystem (used for writing full paths).
-/
+$ /
 
 # Here, in my current directory (used for writing relative paths).
-./
+$ ./
 
 # Up one directory from my current directory (a relative path).
-../
+$ ../
 ```
 
+We can use the 'ls' command we learned to see files and folders in different locations in the filesystem
+
 ```bash
-# show the files and folders in a location (default target is cur dir)
-$ ls 
+# Show files and folders in your current directory
+$ ls ./
 
-# show result as a list for cur dir.
-$ ls -l ./
-
-# show another location on the filesystem
+# show files and folders in another location on the filesystem
 $ ls -l /bin/
+```
 
+What do you think the default argument for 'ls' is?
+
+Now, lets use a new command to move around the filesystem
+
+```bash
 # move to a new location. This becomes your new cur dir.
 $ cd folder/
 ```
+Additionally, we can make new folders in the filesystem
+
 ```bash
 # make a new directory (mkdir is the program, genomics is the target)
 $ mkdir genomics
@@ -77,9 +90,16 @@ $ mkdir genomics
 $ cd genomics
 $ pwd
 ```
+
+### Working with files
+
+### Shell scripts
+
+### The last one
+
 [File system exercise](FSexercise/)
 
-## How to find resources to enhace your personal toolkit
+## __Find resources to build your personal toolkit__
 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
