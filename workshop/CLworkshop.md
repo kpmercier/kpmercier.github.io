@@ -14,7 +14,7 @@ This lab has been modified from the [Software Carpentry](https://software-carpen
 2. Gain a basic toolkit to start using the command line
 3. Be able to find resources to build your personal toolkit
 
-## __Understand why the command line is useful__
+## __1. Understand why the command line is useful__
 
 We have many ways of interacting with computers. We can use a mouse and keyboard, touch screens, and even voice commands. When we interact with our personal computers, we are usually using a graphical user interface, or GUI. GUIs are a visual representation of a program and allow us to use the mouse and keyboard to click options and input arguments to run the program. 
 
@@ -22,9 +22,9 @@ While GUIs are intuitive and work well most of the time, imagine the following s
 
 Today, we will be using a Unix-based command line, used on Mac and Linux computers. Windows computers use a slightly different language for their command line, but the skills we learn should be transferable. Skills we will cover in this workshop include: navigating & creating folders; listing, searching & moving batches of files; editing & running shell scripts.
 
-## __Gain a basic toolkit to start using the command line__
+## __2. Gain a basic toolkit to start using the command line__
 
-### Fundamentals
+### _Fundamentals_
 
 When you start up a terminal you will see a prompt
 
@@ -56,7 +56,7 @@ You can find information about programs, including its options and arguments.
 $ ls -h
 ```
 
-### The filesystem
+### _The filesystem_
 
 ![File System](Filesystem_tree.png)
 
@@ -102,15 +102,16 @@ $ cd genomics
 $ pwd
 ```
 
-### Working with files
+### _Working with files_
 
-### Shell scripts
+### _Shell scripts_
 
-### The last one
+### _The last one_
 
 [File system exercise](FSexercise/)
 
-## __Find resources to build your personal toolkit__
+## __3. Find resources to build your personal toolkit__
 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
+[Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
