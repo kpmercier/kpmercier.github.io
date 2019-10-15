@@ -6,13 +6,13 @@ permalink: /CLworkshop/
 
 28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
 
-## __Objectives__
+## _Objectives_
 
 1. Understand why the command line is useful
 2. Gain a basic toolkit to start using the command line
 3. How to find resources to enhace your personal toolkit
 
-## Understand why the command line is useful
+## *Understand why the command line is useful*
 
 The command line is a tool to control your computer using a text interface. It will be 
 very useful if you are working with very large text data sets, or want to run the same
