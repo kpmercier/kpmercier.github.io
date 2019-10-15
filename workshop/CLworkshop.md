@@ -56,6 +56,8 @@ You can find information about programs, including its options and arguments, us
 $ ls -h
 ```
 
+_What is your current location and what files and folders are in that location?_
+
 ### _The filesystem_
 
 ![File System](Filesystem_tree.png)
