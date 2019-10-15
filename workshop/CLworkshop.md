@@ -6,6 +6,8 @@ permalink: /CLworkshop/
 
 28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
 
+This workshop has been modified from the [Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
+
 ## __Objectives__
 
 1. Understand why the command line is useful
@@ -30,12 +32,14 @@ When you start up a terminal you will see a prompt
 $ 
 ```
 
-Lines beginning with # are comments and are not executed
+Lines beginning with # are comments and are not executed. The command line is used to run programs, which may have options and arguements
 
 ```bash
 # This is the general format of unix command line tools
 $ program -option1 -option2 argument
 ```
+
+Here is an example of two programs
 
 ```bash
 # The 'pwd' program with no option or argument prints your current location
@@ -43,6 +47,13 @@ $ pwd
 
 # The 'ls' program with no option or argument prints the files and folders in your current location
 $ ls 
+```
+
+You can find information about programs, including its options and arguments.
+
+```bash
+# Running a program with the -h option (short for 'help') will print information on that programs use
+$ ls -h
 ```
 
 ### The filesystem
@@ -103,10 +114,3 @@ $ pwd
 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
-### Inspiration for this workshop comes from 
-
-http://swcarpentry.github.io/shell-novice/01-intro/index.html
-
-RADcamp ipyrad command line introduction
-
-Clemson Palmetto command line workshop
