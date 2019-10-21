@@ -66,10 +66,10 @@ First, we are going to use the command line to download some files we will use i
 
 ```shell
 # Download a zipped file named "data.zip" from the internet
-wget kpmercier.github.io/workshop/data.zip
+$ wget kpmercier.github.io/workshop/data.zip
 
 # Unzip the "data.zip" file
-unzip data.zip
+$ unzip data.zip
 ```
 
 We can use the command line to point to locations in the filesystem
@@ -131,17 +131,18 @@ Suppose we have several hundred genome data files named basilisk.dat, minotaur.d
 The structure of these files is the same: the common name, classification, and updated date are presented on the first three lines, with DNA sequences on the following lines. Let’s look at the files:
 
 ```shell
-head -n 5 basilisk.dat minotaur.dat unicorn.dat
+$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 ```
 
 We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
 
 ```shell
-for thing in list_of_things
-do
-    operation_using $thing    # Indentation within the loop is not required, but aids legibility
-done
+# for thing in list_of_things
+> do
+>     operation_using $thing    # Indentation within the loop is not required, but aids legibility
+> done
 ```
+
 and we can apply this to our example like this:
 
 ```shell
