@@ -259,6 +259,9 @@ grep’s real power doesn’t come from its options, though; it comes from the f
 $ grep -E '^.o' haiku.txt
 ```
 
+
+[Finding Things exercise](FTExercise/)
+
 ### _Loops_
 
 Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
@@ -289,7 +292,6 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 > done
 ```
 
-[Loop exercise](FTExercise/)
 
 ### _Shell scripts_
 
