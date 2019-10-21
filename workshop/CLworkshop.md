@@ -104,22 +104,41 @@ Now, lets learn a new command to move around the filesystem
 $ cd data/
 ```
 
+_What files and folders are in the data directory_
+
 ### _Working with files_
 
-
-We can make new folders in the filesystem
+Let’s go back to our data-shell directory on the Desktop and use ls to see what it contains:
 
 ```shell
-# make a new directory (mkdir is the program, genomics is the target)
-$ mkdir thesis
-# See the new folder in our current directory
+$ pwd
+$ ls
+```
+Let’s create a new directory called thesis using the command mkdir thesis (which has no output):
+
+```shell
+ $ mkdir thesis
+``` 
+
+As you might guess from its name, mkdir means ‘make directory’. Since thesis is a relative path (i.e., does not have a leading slash, like /what/ever/thesis), the new directory is created in the current working directory:
+
+```shell
 $ ls
 ```
 
-# change directory (move) into the new directory and run pwd again
-$ cd workshop
-$ pwd
+Since we’ve just created the thesis directory, there’s nothing in it yet:
+
+```shell
+$ ls thesis
 ```
+
+Let’s change our working directory to thesis using cd, then run a text editor called Nano to create a file called draft.txt:
+
+```shell
+$ cd thesis
+$ nano.txt
+```
+
 
 
 ### _Loops_
