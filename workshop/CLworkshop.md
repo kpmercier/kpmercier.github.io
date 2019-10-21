@@ -137,7 +137,7 @@ $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
 
 ```shell
-# for thing in list_of_things
+$ for thing in list_of_things
 > do
 >     operation_using $thing    # Indentation within the loop is not required, but aids legibility
 > done
