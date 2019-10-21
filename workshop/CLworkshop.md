@@ -62,6 +62,16 @@ _What is your current location and what files and folders are in that location?_
 
 ![File System](Filesystem_tree.png)
 
+First, we are going to use the command line to download some files we will use in the rest of this workshop
+
+```shell
+# Download a zipped file named "data.zip" from the internet
+wget kpmercier.github.io/workshop/data.zip
+
+# Unzip the "data.zip" file
+unzip data.zip
+```
+
 We can use the command line to point to locations in the filesystem
 
 ```shell
@@ -82,7 +92,7 @@ We can use the 'ls' command we learned to see files and folders in different loc
 $ ls ./
 
 # show files and folders in another location on the filesystem
-$ ls -l /bin/
+$ ls -l data/
 ```
 
 _What do you think the default argument for 'ls' is?_
@@ -91,30 +101,25 @@ Now, lets learn a new command to move around the filesystem
 
 ```shell
 # move to a new location. This becomes your new cur dir.
-$ cd folder/
+$ cd data/
 ```
-Additionally, we can make new folders in the filesystem
+
+### _Working with files_
+
+
+We can make new folders in the filesystem
 
 ```shell
 # make a new directory (mkdir is the program, genomics is the target)
-$ mkdir workshop
+$ mkdir thesis
+# See the new folder in our current directory
+$ ls
+```
 
 # change directory (move) into the new directory and run pwd again
 $ cd workshop
 $ pwd
 ```
-
-[File system exercise](FSexercise/)
-
-### _Working with files_
-
-First, we are going to use the command line to download some files we will use in the rest of this workshop
-
-```shell
-wget https://github.com/swcarpentry/shell-novice/tree/gh-pages/data-shell
-cd data
-```
-
 
 
 ### _Loops_
