@@ -206,7 +206,7 @@ grep’s real power doesn’t come from its options, though; it comes from the f
 $ grep -E '^.o' haiku.txt
 ```
 
-[Finding Things exercise](FTexercise/)
+[Finding Things exercise](FTExercise/)
 
 ### _Shell scripts_
 
