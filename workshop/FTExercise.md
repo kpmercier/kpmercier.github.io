@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  Script Exercise
-permalink: /CLworkshop/ScriptExercise/
+title:  Finding Things Exercise
+permalink: /CLworkshop/FTExercise/
 ---
 
 
