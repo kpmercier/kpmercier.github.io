@@ -139,6 +139,7 @@ $ cd thesis
 $ nano.txt
 ```
 
+![Nano](nano-screenshot.png)
 
 
 ### _Loops_
