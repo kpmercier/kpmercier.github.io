@@ -108,6 +108,24 @@ $ pwd
 
 ### _Working with files_
 
+Lets create a new directory for this workshop named workshop
+
+```shell
+mkdir workshop
+```
+
+Now lets move into this new directory
+
+```shell
+cd workshop
+```
+
+Here, we are going to use the command line to download data we will use in the rest of this workshop
+
+```shell
+wget https://github.com/swcarpentry/shell-novice/tree/gh-pages/data-shell
+```
+
 ### _Loops_
 
 Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
