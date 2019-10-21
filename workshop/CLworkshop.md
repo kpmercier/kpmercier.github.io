@@ -87,7 +87,7 @@ $ ls -l /bin/
 
 _What do you think the default argument for 'ls' is?_
 
-Now, lets use a new command to move around the filesystem
+Now, lets learn a new command to move around the filesystem
 
 ```shell
 # move to a new location. This becomes your new cur dir.
@@ -97,10 +97,10 @@ Additionally, we can make new folders in the filesystem
 
 ```shell
 # make a new directory (mkdir is the program, genomics is the target)
-$ mkdir genomics
+$ mkdir workshop
 
 # change directory (move) into the new directory and run pwd again
-$ cd genomics
+$ cd workshop
 $ pwd
 ```
 
@@ -108,23 +108,14 @@ $ pwd
 
 ### _Working with files_
 
-Lets create a new directory for this workshop named workshop
-
-```shell
-mkdir workshop
-```
-
-Now lets move into this new directory
-
-```shell
-cd workshop
-```
-
-Here, we are going to use the command line to download data we will use in the rest of this workshop
+First, we are going to use the command line to download some files we will use in the rest of this workshop
 
 ```shell
 wget https://github.com/swcarpentry/shell-novice/tree/gh-pages/data-shell
+cd data
 ```
+
+
 
 ### _Loops_
 
