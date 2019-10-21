@@ -141,6 +141,45 @@ $ nano.txt
 
 ![Nano](nano-screenshot.png)
 
+nano doesn’t leave any output on the screen after it exits, but ls now shows that we have created a file called draft.txt:
+
+```shell
+$ ls
+```
+
+Returning to the data-shell directory,
+
+```shell
+$ cd ..
+```
+
+In our thesis directory we have a file draft.txt which isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for ‘move’:
+
+```shell
+$ mv thesis/draft.txt thesis/quotes.txt
+```
+
+The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. Sure enough, ls shows us that thesis now contains one file called quotes.txt:
+
+```shell
+$ ls thesis
+```
+
+Let’s move quotes.txt into the current working directory. We use mv once again, but this time we’ll use just the name of a directory as the second argument to tell mv that we want to keep the filename, but put the file somewhere new. (This is why the command is called ‘move’.) In this case, the directory name we use is the special directory name . that we mentioned earlier.
+
+```shell
+$ mv thesis/quotes.txt .
+```
+The effect is to move the file from the directory it was in to the current working directory. ls now shows us that thesis is empty:
+
+ 
+```shell
+$ ls thesis
+```
+
+Further, ls with a filename or directory name as an argument only lists that file or directory. We can use this to see that quotes.txt is still in our current directory:
+
+$ ls quotes.txt
 
 ### _Loops_
 
