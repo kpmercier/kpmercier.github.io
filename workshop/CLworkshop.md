@@ -222,35 +222,7 @@ Wildcards can be used in combination with each other e.g. ???ane.pdb matches thr
 
 When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the command that was asked for. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is. For example typing ls *.pdf in the molecules directory (which contains only files with names ending with .pdb) results in an error message that there is no file called *.pdf. However, generally commands like wc and ls see the lists of file names matching these expressions, but not the wildcards themselves. It is the shell, not the other programs, that deals with expanding wildcards, and this is another example of orthogonal design.
 
-### _Loops_
-
-Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
-
-Suppose we have several hundred genome data files named basilisk.dat, minotaur.dat, and unicorn.dat. For this example, we’ll use the creatures directory which only has three example files, but the principles can be applied to many many more files at once.
-
-The structure of these files is the same: the common name, classification, and updated date are presented on the first three lines, with DNA sequences on the following lines. Let’s look at the files:
-
-```shell
-$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
-```
-
-We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
-
-```shell
-$ for thing in list_of_things
-> do
->     operation_using $thing    # Indentation within the loop is not required, but aids legibility
-> done
-```
-
-and we can apply this to our example like this:
-
-```shell
-$ for filename in basilisk.dat minotaur.dat unicorn.dat
-> do
->    head -n 2 $filename | tail -n 1
-> done
-```
+[Files and Folders Exercise](FFexercise/)
 
 ### _Finding Things_
 
@@ -287,7 +259,37 @@ grep’s real power doesn’t come from its options, though; it comes from the f
 $ grep -E '^.o' haiku.txt
 ```
 
-[Finding Things exercise](FTExercise/)
+### _Loops_
+
+Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
+
+Suppose we have several hundred genome data files named basilisk.dat, minotaur.dat, and unicorn.dat. For this example, we’ll use the creatures directory which only has three example files, but the principles can be applied to many many more files at once.
+
+The structure of these files is the same: the common name, classification, and updated date are presented on the first three lines, with DNA sequences on the following lines. Let’s look at the files:
+
+```shell
+$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
+```
+
+We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
+
+```shell
+$ for thing in list_of_things
+> do
+>     operation_using $thing    # Indentation within the loop is not required, but aids legibility
+> done
+```
+
+and we can apply this to our example like this:
+
+```shell
+$ for filename in basilisk.dat minotaur.dat unicorn.dat
+> do
+>    head -n 2 $filename | tail -n 1
+> done
+```
+
+[Loop exercise](FTExercise/)
 
 ### _Shell scripts_
 
