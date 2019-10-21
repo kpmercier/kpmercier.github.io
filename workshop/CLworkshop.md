@@ -108,9 +108,46 @@ $ pwd
 
 ### _Working with files_
 
+
+### _Finding Things_
+
+In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
+
+grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
+
+```shell
+$ cd
+$ cd Desktop/data-shell/writing
+$ cat haiku.txt
+```
+
+Let’s find lines that contain the word ‘not’:
+
+```shell
+$ grep not haiku.txt
+```
+Here, not is the pattern we’re searching for. The grep command searches through the file, looking for matches to the pattern specified. To use it type grep, then the pattern we’re searching for and finally the name of the file (or files) we’re searching in.
+
+The output is the three lines in the file that contain the letters ‘not’.
+
+By default, grep searches for a pattern in a case-sensitive way. In addition, the search pattern we have selected does not have to form a complete word, as we will see in the next example.
+
+Let’s search for the pattern: ‘The’.
+
+```shell
+$ grep The haiku.txt
+```
+
+grep’s real power doesn’t come from its options, though; it comes from the fact that patterns can include wildcards. (The technical name for these is regular expressions, which is what the ‘re’ in ‘grep’ stands for.) Regular expressions are both complex and powerful; if you want to do complex searches, please look at the lesson on our website. As a taster, we can find lines that have an ‘o’ in the second position like this:
+
+```shell
+$ grep -E '^.o' haiku.txt
+```
+
+[Finding Things exercise](FTexercise/)
+
 ### _Shell scripts_
 
-### _The last one_
 
 ## __3. Find resources to build your personal toolkit__
 
