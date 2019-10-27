@@ -19,7 +19,7 @@ Lines beginning with # are comments and are not executed. The command line is us
 ```shell
 # This is the general format of unix command line tools
 $ program -option1 -option2 argument
-> output
+output
 ```
 
 You can find information about programs, including its options and arguments, using the help option
