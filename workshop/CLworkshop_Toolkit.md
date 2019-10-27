@@ -25,7 +25,7 @@ output
 You can find information about programs, including its options and arguments, using the help option
 
 ```shell
-# Running a program with the -h option (short for 'help') will print information on that programs usage
+# Running a program with the -h option will print helpful information
 $ ls -h
 ```
 
