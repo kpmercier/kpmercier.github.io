@@ -8,7 +8,7 @@ permalink: /Links/
 
 ### Workshops
 
-[Introduction to the Command Line](CLworkshop)
+[Introduction to the Command Line](/CLworkshop)
 
 ### Some interesting links
 
