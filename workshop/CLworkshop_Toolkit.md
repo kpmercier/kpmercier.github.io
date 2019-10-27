@@ -1,6 +1,6 @@
 ---
 layout: page_nohead
-title: 
+title: Commandline Workshop - Toolkit
 permalink: /CLworkshop/Toolkit
 ---
 
