@@ -6,15 +6,6 @@ permalink: /CLworkshop/Toolkit2/
 
 ### _Working with files_
 
-First, we are going to use the command line to download some files we will use in the rest of this workshop
-
-```shell
-# Download a zipped file named "data.zip" from the internet
-$ wget kpmercier.github.io/workshop/data.zip
-
-# Unzip the "data.zip" file
-$ unzip data.zip
-```
 
 We can use the command line to point to locations in the filesystem
 
