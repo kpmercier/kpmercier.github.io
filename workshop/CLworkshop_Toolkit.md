@@ -4,16 +4,6 @@ title: Commandline Workshop - Toolkit
 permalink: /CLworkshop/Toolkit
 ---
 
-28 October 2019 \| Kathryn Mercier \| CUNY Graduate Center
-
-This lab has been modified from the [Software Carpentry](https://software-carpentry.org/) lesson [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
-
-## __Objectives__
-
-1. Understand why the command line is useful
-2. Gain a basic toolkit to start using the command line
-3. Be able to find resources to build your personal toolkit
-
 ## __2. Gain a basic toolkit to start using the command line__
 
 ### _Fundamentals_
@@ -47,6 +37,8 @@ You can find information about programs, including its options and arguments, us
 # Running a program with the -h option (short for 'help') will print information on that programs usage
 $ ls -h
 ```
+
+[Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
 _What is your current location and what files and folders are in that location?_
 
@@ -284,6 +276,9 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 
 
 ### _Shell scripts_
+
+
+[Resources](Resources/)
 
 
 ## __3. Find resources to build your personal toolkit__
