@@ -4,65 +4,29 @@ title: Commandline Workshop - Toolkit2
 permalink: /CLworkshop/Toolkit2/
 ---
 
-### _Working with files_
-
-
-We can use the command line to point to locations in the filesystem
-
-```shell
-# The root (top) of the entire filesystem (used for writing full paths).
-$ /
-
-# Here, in my current directory (used for writing relative paths).
-$ ./
-
-# Up one directory from my current directory (a relative path).
-$ ../
-```
-
-We can use the 'ls' command we learned to see files and folders in different locations in the filesystem
-
-```shell
-# Show files and folders in your current directory
-$ ls ./
-
-# show files and folders in another location on the filesystem
-$ ls -l data/
-```
-
-_What do you think the default argument for 'ls' is?_
-
-
-
-Now, lets learn a new command to move around the filesystem
-
-```shell
-# move to a new location. This becomes your new cur dir.
-$ cd data/
-```
+### _Working with files and folders_
 
 Let’s go back to our data-shell directory and use ls to see what it contains:
 
 ```shell
 $ pwd
+/Users/nelle/Desktop/data-shell
 $ ls
+creatures  data  molecules  north-pacific-gyre  notes.txt  pizza.cfg  solar.pdf  writing
 ```
 Let’s create a new directory called thesis using the command mkdir thesis (which has no output):
 
 ```shell
- $ mkdir thesis
-``` 
-
-As you might guess from its name, mkdir means ‘make directory’. Since thesis is a relative path (i.e., does not have a leading slash, like /what/ever/thesis), the new directory is created in the current working directory:
-
-```shell
+$ mkdir thesis
 $ ls
+creatures  data  molecules  north-pacific-gyre  notes.txt  pizza.cfg  solar.pdf  thesis  writing
 ```
 
 Since we’ve just created the thesis directory, there’s nothing in it yet:
 
 ```shell
 $ ls thesis
+
 ```
 
 Let’s change our working directory to thesis using cd, then run a text editor called Nano to create a file called draft.txt:
