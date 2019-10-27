@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_nohead
 title: 
 permalink: /CLworkshop/Toolkit1
 ---
