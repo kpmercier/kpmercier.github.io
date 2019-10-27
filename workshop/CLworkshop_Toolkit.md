@@ -33,4 +33,4 @@ $ ls -h
 
 __First exercise: Open the terminal, then (using commands from the cheatsheet) figure out your current directory and what files and folders are in that location.__
 
-[Next: Working with Files](Toolkit2/)
+[Next: Working with Files](Toolkit2)
