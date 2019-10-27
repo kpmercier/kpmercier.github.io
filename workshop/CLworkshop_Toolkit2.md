@@ -1,7 +1,7 @@
 ---
 layout: page_nohead
 title: Commandline Workshop - Toolkit2
-permalink: /CLworkshop/Toolkit2
+permalink: /CLworkshop/Toolkit2/
 ---
 
 ### _Working with files_
@@ -50,11 +50,7 @@ Now, lets learn a new command to move around the filesystem
 $ cd data/
 ```
 
-_What files and folders are in the data directory_
-
-
-
-Let’s go back to our data-shell directory on the Desktop and use ls to see what it contains:
+Let’s go back to our data-shell directory and use ls to see what it contains:
 
 ```shell
 $ pwd
