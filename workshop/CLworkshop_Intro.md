@@ -22,4 +22,4 @@ While GUIs are intuitive and work well most of the time, imagine the following s
 
 Today, we will be using a Unix-based command line, used on Mac and Linux computers. Windows computers use a slightly different language for their command line, but the skills we learn should be transferable. Skills we will cover in this workshop include: navigating & creating folders; listing, searching & moving batches of files; editing & running shell scripts.
 
-[Onto the toolkit!](CLworkshop_toolkit1/)
+[Onto the toolkit!](Toolkit/)
