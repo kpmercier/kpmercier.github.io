@@ -6,6 +6,10 @@ permalink: /Links/
 
 <img src="/images/PCRmagic.jpg" alt="alt text" width="350" align="right">
 
+### Workshops
+
+[Introduction to the Command Line](CLworkshop)
+
 ### Some interesting links
 
 [Advice for applying to PhD programs](https://medium.com/@caseywdunn/applying-to-biology-phd-programs-58abece3284a)
@@ -27,4 +31,6 @@ permalink: /Links/
 [PhD Comics](http://phdcomics.com/)
 
 [Spurious correlations](http://www.tylervigen.com/spurious-correlations)
+
+
 
