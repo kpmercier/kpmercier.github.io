@@ -31,6 +31,8 @@ $ ls -h
 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF with listing common commands with short explanations
 
+------
+
 __First exercise: Open the terminal, then (using commands from the cheatsheet) figure out your current directory and what files and folders are in that location.__
 
 [Next: Working with Files](Toolkit2)
