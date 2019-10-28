@@ -4,7 +4,7 @@ title: Commandline Workshop - Toolkit6
 permalink: /CLworkshop/Toolkit6/
 ---
 
-### _Shell scripts_
+### __Shell scripts__
 
 We are finally ready to see what makes the shell such a powerful programming environment. We are going to take the commands we repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command. For historical reasons, a bunch of commands saved in a file is usually called a shell script, but make no mistake: these are actually small programs.
 
