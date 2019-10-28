@@ -52,7 +52,48 @@ The Tao that is seen
 ```
 This time, two lines that include the letters ‘The’ are outputted, one of which contained our search pattern within a larger word, ‘Thesis’.
 
+To restrict matches to lines containing the word ‘The’ on its own, we can give grep with the -w option. This will limit matches to word boundaries.
+
+```shell
+$ grep -w The haiku.txt
+The Tao that is seen
+```
+
+We’ve now seen that you don’t have to have quotes around single words, but it is useful to use quotes when searching for multiple words. It also helps to make it easier to distinguish between the search term or phrase and the file being searched. We will use quotes in the remaining examples.
+
+Another useful option is -n, which numbers the lines that match:
+
+```shell
+$ grep -n "it" haiku.txt
+5:With searching comes loss
+9:Yesterday it worked
+10:Today it is not working
+```
+
+---
+
+__Task__
+
+Which lines of the haiku contain the word the?
+
+__Solution__
+
+Using the two options we've learned in combination:
+
+```shell
+$ grep -n -w "the" haiku.txt
+2:Is not the true Tao, until
+6:and the presence of absence:
+```
+
+We find that The is on lines 2 and 6!
+
+---
+
+
 grep’s real power doesn’t come from its options, though; it comes from the fact that patterns can include regular expressions, or wildcards.
+
+[Wildcard Cheatsheet](https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php)
 
 \* is a wildcard, which matches zero or more characters. Let’s consider the data-shell/molecules directory: \*.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. On the other hand, p*.pdb only matches pentane.pdb and propane.pdb, because the ‘p’ at the front only matches filenames that begin with the letter ‘p’.
 
@@ -62,7 +103,7 @@ Wildcards can be used in combination with each other e.g. ???ane.pdb matches thr
 
 When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the command that was asked for. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is. For example typing ls \*.pdf in the molecules directory (which contains only files with names ending with .pdb) results in an error message that there is no file called *.pdf. However, generally commands like wc and ls see the lists of file names matching these expressions, but not the wildcards themselves. It is the shell, not the other programs, that deals with expanding wildcards, and this is another example of orthogonal design.
 
-------
+---
 
 __Task__
 
@@ -78,7 +119,7 @@ ethane.pdb methane.pdb
 4. ls ethane.\*
 
 
-__Task Answer__
+__Solution__
 
 The solution is 3.
 
@@ -90,5 +131,6 @@ The solution is 3.
 
 4. only shows files starting with ethane.
 
+---
 
 [Next Module: Pipes and Filers](/CLworkshop/Toolkit4/)
