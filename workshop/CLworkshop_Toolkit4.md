@@ -9,7 +9,7 @@ permalink: /CLworkshop/Toolkit4/
 Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
 
 ```shell
-$ ls molecules
+$ ls
 ```
 ```
 cubane.pdb    ethane.pdb    methane.pdb
@@ -21,7 +21,6 @@ Let’s go into that directory with cd and run the command wc *.pdb. wc is the �
 The \* in \*.pdb matches zero or more characters, so the shell turns \*.pdb into a list of all .pdb files in the current directory:
 
 ```shell
-$ cd molecules
 $ wc *.pdb
 ```
 ```
