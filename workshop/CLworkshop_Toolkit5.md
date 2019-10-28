@@ -15,6 +15,28 @@ The structure of these files is the same: the common name, classification, and u
 ```shell
 $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 ```
+```
+==> basilisk.dat <==
+COMMON NAME: basilisk
+CLASSIFICATION: basiliscus vulgaris
+UPDATED: 1745-05-02
+CCCCAACGAG
+GAAACAGATC
+
+==> minotaur.dat <==
+COMMON NAME: minotaur
+CLASSIFICATION: bos hominus
+UPDATED: 1765-02-17
+CCCGAAGGAC
+CGACATCTCT
+
+==> unicorn.dat <==
+COMMON NAME: unicorn
+CLASSIFICATION: equus monoceros
+UPDATED: 1738-11-24
+AGCCGGGTCG
+CTTTACCTTA
+```
 
 We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
 
@@ -39,9 +61,11 @@ CLASSIFICATION: bos hominus
 CLASSIFICATION: equus monoceros
 ```
 
-When the shell sees the keyword for, it knows to repeat a command (or group of commands) once for each item in a list. Each time the loop runs (called an iteration), an item in the list is assigned in sequence to the variable, and the commands inside the loop are executed, before moving on to the next item in the list. Inside the loop, we call for the variable’s value by putting $ in front of it. The $ tells the shell interpreter to treat the variable as a variable name and substitute its value in its place, rather than treat it as text or an external command.
+When the shell sees the keyword _for_, it knows to repeat a command (or group of commands) once for each item in a list. Each time the loop runs (called an iteration), an item in the list is assigned in sequence to the variable, and the commands inside the loop are executed, before moving on to the next item in the list. Inside the loop, we call for the variable’s value by putting $ in front of it. The $ tells the shell interpreter to treat the variable as a variable name and substitute its value in its place, rather than treat it as text or an external command.
 
-In this example, the list is three filenames: basilisk.dat, minotaur.dat, and unicorn.dat. Each time the loop iterates, it will assign a file name to the variable filename and run the head command. The first time through the loop, $filename is basilisk.dat. The interpreter runs the command head on basilisk.dat and pipes the first two lines to the tail command, which then prints the second line of basilisk.dat. For the second iteration, $filename becomes minotaur.dat. This time, the shell runs head on monotaur.dat and pipes the first two lines to the tail command, which then prints the second line of monotaur.dat. For the third iteration, $filename becomes unicorn.dat, so the shell runs the head command on that file, and tail on the output of that. Since the list was only three items, the shell exits the for loop.
+In this example, the list is three filenames: basilisk.dat, minotaur.dat, and unicorn.dat. Each time the loop iterates, it will assign a file name to the variable _filename_ and run the _head_ command. The first time through the loop, _$filename_ is basilisk.dat. The interpreter runs the command _head_ on basilisk.dat and pipes the first two lines to the _tail_ command, which then prints the second line of basilisk.dat. For the second iteration, _$filename_ becomes minotaur.dat. This time, the shell runs head on monotaur.dat and pipes the first two lines to the tail command, which then prints the second line of monotaur.dat. For the third iteration, $filename becomes unicorn.dat, so the shell runs the head command on that file, and tail on the output of that. Since the list was only three items, the shell exits the for loop.
+
+---
 
 __Task__
 
@@ -112,7 +136,30 @@ $ for filename in *.dat
 >     head -n 100 $filename | tail -n 20
 > done
 ```
----
+
+The shell starts by expanding *.dat to create the list of files it will process. The loop body then executes two commands for each of those files. The first command, echo, prints its command-line arguments to standard output. For example:
+
+```shell
+$ echo hello there
+```
+
+prints:
+
+```
+hello there
+```
+
+In this case, since the shell expands $filename to be the name of a file, echo $filename prints the name of the file. Note that we can’t write this as:
+
+```shell
+$ for filename in *.dat
+> do
+>     $filename
+>     head -n 100 $filename | tail -n 20
+> done
+```
+
+because then the first time through the loop, when $filename expanded to basilisk.dat, the shell would try to run basilisk.dat as a program. Finally, the head and tail combination selects lines 81-100 from whatever file is being processed (assuming the file has at least 100 lines).
 
 We would like to modify each of the files in data-shell/creatures, but also save a version of the original files, naming the copies original-basilisk.dat and original-unicorn.dat. We can’t use:
 
