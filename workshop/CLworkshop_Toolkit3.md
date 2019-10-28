@@ -142,4 +142,4 @@ The solution is 3.
 
 ---
 
-[Next Module: Pipes and Filers](/CLworkshop/Toolkit4/)
+[Next Module: Pipes and Filters](/CLworkshop/Toolkit4/)
