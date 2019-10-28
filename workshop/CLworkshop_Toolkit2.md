@@ -33,7 +33,7 @@ Let’s change our working directory to thesis using cd, then run a text editor 
 
 ```shell
 $ cd thesis
-$ nano.txt
+$ nano draft.txt
 ```
 
 ![Nano](nano-screenshot.png)
