@@ -114,6 +114,13 @@ We can confirm the file has gone using ls:
 $ ls quotes.txt
 ls: cannot access 'quotes.txt': No such file or directory
 ```
+------
+
+__Suppose that you created a plain-text file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt
+
+After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?__
+
+------
 
 * is a wildcard, which matches zero or more characters. Let’s consider the data-shell/molecules directory: *.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. On the other hand, p*.pdb only matches pentane.pdb and propane.pdb, because the ‘p’ at the front only matches filenames that begin with the letter ‘p’.
 
