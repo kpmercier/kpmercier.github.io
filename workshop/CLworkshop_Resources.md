@@ -12,6 +12,10 @@ permalink: /CLworkshop/Resources/
 
 [Wildcard Cheat Sheet](https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php) The main concepts involved in using the command line program grep
 
+[Summary of Basic Commands](https://swcarpentry.github.io/shell-novice/reference/)
+
+[explainshell.com](https://explainshell.com/) will dissect any shell command you type in and display help text for each piece
+
 ### Mac and Windows information
 
 [How to use Terminal on Mac](https://www.macworld.co.uk/how-to/mac-software/how-use-terminal-on-mac-3608274/)
