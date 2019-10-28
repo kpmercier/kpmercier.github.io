@@ -93,6 +93,4 @@ __Task Answers__
 3. cd       Shortcut for #3
 4. cd ~/data/..    Extra complication, but okay!
 
-
-
 [Next Module: Working with Files and Folders](/CLworkshop/Toolkit2/)
