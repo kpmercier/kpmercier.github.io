@@ -4,6 +4,18 @@ title: Commandline Workshop - Toolkit4
 permalink: /CLworkshop/Toolkit4/
 ---
 
+__Task Answer__
+
+The solution is 3.
+
+1. shows all files whose names contain zero or more characters (*) followed by the letter t, then zero or more characters (*) followed by ane.pdb. This gives ethane.pdb methane.pdb octane.pdb pentane.pdb.
+
+2. shows all files whose names start with zero or more characters (*) followed by the letter t, then a single character (?), then ne. followed by zero or more characters (*). This will give us octane.pdb and pentane.pdb but doesn’t match anything which ends in thane.pdb.
+
+3. fixes the problems of option 2 by matching two characters (??) between t and ne. This is the solution.
+
+4. only shows files starting with ethane.
+
 ### _Pipes and Filters_
 
 Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
@@ -44,4 +56,4 @@ $ wc -l *.pdb
  107  total
  ```
  
-[Loops](/CLworkshop/Toolkit5/)
+[Task Answer & Next Module](/CLworkshop/Toolkit5/)
