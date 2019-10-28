@@ -10,8 +10,12 @@ Let’s go back to our data-shell directory and use ls to see what it contains:
 
 ```shell
 $ pwd
+```
+```
 /Users/Katie/Desktop/data-shell
 $ ls
+```
+```
 creatures  data  molecules  north-pacific-gyre  notes.txt  pizza.cfg  solar.pdf  writing
 ```
 Let’s create a new directory called thesis using the command mkdir thesis (which has no output):
@@ -19,6 +23,8 @@ Let’s create a new directory called thesis using the command mkdir thesis (whi
 ```shell
 $ mkdir thesis
 $ ls
+```
+```
 creatures  data  molecules  north-pacific-gyre  notes.txt  pizza.cfg  solar.pdf  thesis  writing
 ```
 
@@ -42,6 +48,8 @@ nano doesn’t leave any output on the screen after it exits, but ls now shows t
 
 ```shell
 $ ls
+```
+```
 draft.txt
 ```
 
@@ -61,6 +69,8 @@ The first argument tells mv what we’re ‘moving’, while the second is where
 
 ```shell
 $ ls thesis
+```
+```
 quotes.txt
 ```
 
@@ -82,6 +92,8 @@ The cp command works very much like mv, except it copies a file instead of movin
 ```shell
 $ cp quotes.txt thesis/quotations.txt
 $ ls quotes.txt thesis/quotations.txt
+```
+```
 quotes.txt   thesis/quotations.txt
 ```
 
@@ -95,6 +107,8 @@ We can check the result by listing the contents of both the thesis and thesis_ba
 
 ```shell
 $ ls thesis thesis_backup
+```
+```
 thesis:
 quotations.txt
 
@@ -126,6 +140,8 @@ We can confirm the file has gone using ls:
 
 ```shell
 $ ls quotes.txt
+```
+```
 ls: cannot access 'quotes.txt': No such file or directory
 ```
 
@@ -146,6 +162,8 @@ In the example below, what does cp do when given three or more file names?
 
 ```shell
 $ ls
+```
+```
 amino-acids.txt  animals.txt  backup/  elements/  morse.txt  pdb/  planets.txt  salmon.txt  sunspot.txt
 $ cp amino-acids.txt animals.txt morse.txt
 ```
