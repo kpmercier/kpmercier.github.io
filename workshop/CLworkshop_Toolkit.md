@@ -68,7 +68,7 @@ __Solution__
 
 The -l option makes ls use a long listing format, showing not only the file/directory names but also additional information such as the file size and the time of its last modification. If you use both the -h option and the -l option, this makes the file size ‘human readable’, i.e. displaying something like 5.3K instead of 5369.
 
-===
+---
 
 Second, we can actually change our location to a different directory, so we are no longer located in our home directory.
 
@@ -95,7 +95,7 @@ $ cd ..
 $ pwd
 /Users/Katie/Desktop/data-shell
 ```
-
+---
 __Task__
 
 Starting from _/Users/amanda/data_, what command could Amanda use to navigate to her home directory, which is _/Users/amanda?_
@@ -106,6 +106,8 @@ __Solution__
 2. cd ..    Change directory to parent directory
 3. cd       Shortcut for #3
 4. cd ~/data/..    Extra complication, but okay!
+
+---
 
 __Nelle’s Pipeline: Organizing Files__
 
