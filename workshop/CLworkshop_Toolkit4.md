@@ -10,6 +10,8 @@ Now that we know a few basic commands, we can finally look at the shell’s most
 
 ```shell
 $ ls molecules
+```
+```
 cubane.pdb    ethane.pdb    methane.pdb
 octane.pdb    pentane.pdb   propane.pdb
 ```
