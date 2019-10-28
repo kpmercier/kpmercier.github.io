@@ -42,6 +42,7 @@ nano doesn’t leave any output on the screen after it exits, but ls now shows t
 
 ```shell
 $ ls
+draft.txt
 ```
 
 Returning to the data-shell directory,
@@ -60,6 +61,7 @@ The first argument tells mv what we’re ‘moving’, while the second is where
 
 ```shell
 $ ls thesis
+quotes.txt
 ```
 
 Let’s move quotes.txt into the current working directory. We use mv once again, but this time we’ll use just the name of a directory as the second argument to tell mv that we want to keep the filename, but put the file somewhere new. (This is why the command is called ‘move’.) In this case, the directory name we use is the special directory name . that we mentioned earlier.
@@ -72,12 +74,7 @@ The effect is to move the file from the directory it was in to the current worki
  
 ```shell
 $ ls thesis
-```
 
-Further, ls with a filename or directory name as an argument only lists that file or directory. We can use this to see that quotes.txt is still in our current directory:
-
-```shell
-$ ls quotes.txt
 ```
 
 The cp command works very much like mv, except it copies a file instead of moving it. We can check that it did the right thing using ls with two paths as arguments — like most Unix commands, ls can be given multiple paths at once:
@@ -85,6 +82,7 @@ The cp command works very much like mv, except it copies a file instead of movin
 ```shell
 $ cp quotes.txt thesis/quotations.txt
 $ ls quotes.txt thesis/quotations.txt
+quotes.txt   thesis/quotations.txt
 ```
 
 We can also copy a directory and all its contents by using the recursive option -r, e.g. to back up a directory:
@@ -97,6 +95,11 @@ We can check the result by listing the contents of both the thesis and thesis_ba
 
 ```shell
 $ ls thesis thesis_backup
+thesis:
+quotations.txt
+
+thesis_backup:
+quotations.txt
 ```
 
 Returning to the data-shell directory, let’s tidy up this directory by removing the quotes.txt file we created. The Unix command we’ll use for this is rm (short for ‘remove’):
@@ -109,6 +112,7 @@ We can confirm the file has gone using ls:
 
 ```shell
 $ ls quotes.txt
+ls: cannot access 'quotes.txt': No such file or directory
 ```
 
 * is a wildcard, which matches zero or more characters. Let’s consider the data-shell/molecules directory: *.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. On the other hand, p*.pdb only matches pentane.pdb and propane.pdb, because the ‘p’ at the front only matches filenames that begin with the letter ‘p’.
