@@ -117,6 +117,8 @@ This works, but it may take the next person who reads middle.sh a moment to figu
 
 ```shell
 $ nano middle.sh
+```
+```
 # Select lines from the middle of a file.
 # Usage: bash middle.sh filename end_line num_lines
 ```
