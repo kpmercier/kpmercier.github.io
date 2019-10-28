@@ -43,6 +43,66 @@ When the shell sees the keyword for, it knows to repeat a command (or group of c
 
 In this example, the list is three filenames: basilisk.dat, minotaur.dat, and unicorn.dat. Each time the loop iterates, it will assign a file name to the variable filename and run the head command. The first time through the loop, $filename is basilisk.dat. The interpreter runs the command head on basilisk.dat and pipes the first two lines to the tail command, which then prints the second line of basilisk.dat. For the second iteration, $filename becomes minotaur.dat. This time, the shell runs head on monotaur.dat and pipes the first two lines to the tail command, which then prints the second line of monotaur.dat. For the third iteration, $filename becomes unicorn.dat, so the shell runs the head command on that file, and tail on the output of that. Since the list was only three items, the shell exits the for loop.
 
+__Task__
+
+This exercise refers to the data-shell/molecules directory. ls gives the following output:
+
+```
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+```
+
+What is the output of the following code?
+
+```shell
+$ for datafile in *.pdb
+> do
+>    ls *.pdb
+> done
+```
+
+Now, what is the output of the following code?
+
+```shell
+$ for datafile in *.pdb
+> do
+>    ls $datafile
+> done
+```
+
+Why do these two loops give different outputs?
+
+__Solution__
+
+The first code block gives the same output on each iteration through the loop. Bash expands the wildcard *.pdb within the loop body (as well as before the loop starts) to match all files ending in .pdb and then lists them using ls. The expanded loop would look like this:
+
+```shell
+$ for datafile in cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+> do
+>    ls cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+> done
+```
+```
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+```
+
+The second code block lists a different file on each loop iteration. The value of the datafile variable is evaluated using $datafile, and then listed using ls.
+
+```
+cubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+```
+
+---
+
 Let’s continue with our example in the data-shell/creatures directory. Here’s a slightly more complicated loop:
 
 ```shell
@@ -52,7 +112,7 @@ $ for filename in *.dat
 >     head -n 100 $filename | tail -n 20
 > done
 ```
-------
+---
 
 We would like to modify each of the files in data-shell/creatures, but also save a version of the original files, naming the copies original-basilisk.dat and original-unicorn.dat. We can’t use:
 
