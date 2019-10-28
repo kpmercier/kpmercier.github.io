@@ -4,6 +4,8 @@ title: Commandline Workshop - Toolkit3
 permalink: /CLworkshop/Toolkit3/
 ---
 
+### Pipes and Filters
+
 Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
 
 ```shell
@@ -49,9 +51,9 @@ $ wc -l *.pdb
  Nelle has run her samples through the assay machines and created 17 files in the north-pacific-gyre/2012-07-03 directory described earlier. As a quick sanity check, starting from her home directory, Nelle types:
 
 ```shell
- $ cd north-pacific-gyre/2012-07-03
- $ wc -l *.txt
- ```
+$ cd north-pacific-gyre/2012-07-03
+$ wc -l *.txt
+```
  
  The output is 18 lines that look like this:
  
@@ -62,7 +64,7 @@ $ wc -l *.pdb
  300 NENE01751A.txt
  300 NENE01751B.txt
  300 NENE01812A.txt
- ```
+```
  
  ... ...
  Now she types this:
