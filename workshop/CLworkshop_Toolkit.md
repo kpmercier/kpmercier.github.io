@@ -6,7 +6,7 @@ permalink: /CLworkshop/Toolkit/
 
 ## __2. Gain a basic toolkit to start using the command line__
 
-### _Navigating Files and Directories_
+### _Navigating Files and Folders_
 
 First, we are going to use the command line to download some files we will use in the rest of this workshop
 
@@ -113,7 +113,8 @@ __Nelle’s Pipeline: Organizing Files__
 
 Knowing this much about files and directories, Nelle is ready to organize the files that the protein assay machine will create. First, she creates a directory called north-pacific-gyre (to remind herself where the data came from). Inside that, she creates a directory called 2012-07-03, which is the date she started processing the samples. She used to use names like conference-paper and revised-results, but she found them hard to understand after a couple of years. (The final straw was when she found herself creating a directory called revised-revised-results-3.)
 
-Sorting Output
+_Sorting Output_
+
 Nelle names her directories ‘year-month-day’, with leading zeroes for months and days, because the shell displays file and directory names in alphabetical order. If she used month names, December would come before July; if she didn’t use leading zeroes, November (‘11’) would come before July (‘7’). Similarly, putting the year first means that June 2012 will come before June 2013.
 
 Each of her physical samples is labelled according to her lab’s convention with a unique ten-character ID, such as ‘NENE01729A’. This is what she used in her collection log to record the location, time, depth, and other characteristics of the sample, so she decides to use it as part of each data file’s name. Since the assay machine’s output is plain text, she will call her files NENE01729A.txt, NENE01812A.txt, and so on. All 1520 files will go into the same directory.
