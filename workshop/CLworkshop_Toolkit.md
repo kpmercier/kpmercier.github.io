@@ -84,6 +84,6 @@ $ pwd
 
 __Task
 
-Starting from _/Users/amanda/data_, what command could Amanda use to navigate to her home directory, which is _/Users/amanda?___
+Starting from _/Users/amanda/data_, what command could Amanda use to navigate to her home directory, which is _/Users/amanda?_ __
 
 [Working with Files and Folders](/CLworkshop/Toolkit2/)
