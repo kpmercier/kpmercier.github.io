@@ -70,9 +70,16 @@ When the shell sees a wildcard, it expands the wildcard to create a list of matc
 
 __Task__
 
-__Use the help option for grep to figure out what option too add to this input _grep "of" haiku.txt_ to get the following output:__
+When run in the molecules directory, which ls command(s) will produce this output?
 
-___and the presence of absence:___
+```shell
+ethane.pdb methane.pdb
+``` 
+
+1. ls *t*ane.pdb
+2. ls *t?ne.*
+3. ls *t??ne.pdb
+4. ls ethane.*
 
 
 [Task Answer & Next Module](/CLworkshop/Toolkit4/)
