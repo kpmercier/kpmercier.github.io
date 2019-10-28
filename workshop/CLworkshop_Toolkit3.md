@@ -4,63 +4,69 @@ title: Commandline Workshop - Toolkit3
 permalink: /CLworkshop/Toolkit3/
 ---
 
-### Pipes and Filters
 
-Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
+### _Finding Things_
+
+In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
+
+grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
 
 ```shell
-$ ls molecules
-cubane.pdb    ethane.pdb    methane.pdb
-octane.pdb    pentane.pdb   propane.pdb
+$ cd
+$ cd Desktop/data-shell/writing
+$ cat haiku.txt
+
+The Tao that is seen
+Is not the true Tao, until
+You bring fresh toner.
+
+With searching comes loss
+and the presence of absence:
+"My Thesis" not found.
+
+Yesterday it worked
+Today it is not working
+Software is like that.
 ```
 
-Let’s go into that directory with cd and run the command wc *.pdb. wc is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).
-
-The * in *.pdb matches zero or more characters, so the shell turns *.pdb into a list of all .pdb files in the current directory:
+Let’s find lines that contain the word ‘not’:
 
 ```shell
-$ cd molecules
-$ wc *.pdb
-  20  156  1158  cubane.pdb
-  12  84   622   ethane.pdb
-   9  57   422   methane.pdb
-  30  246  1828  octane.pdb
-  21  165  1226  pentane.pdb
-  15  111  825   propane.pdb
- 107  819  6081  total
+$ grep not haiku.txt
+Is not the true Tao, until
+"My Thesis" not found
+Today it is not working
 ```
-Note that wc *.pdb also shows the total number of all lines in the last line of the output.
 
-If we run wc -l instead of just wc, the output shows only the number of lines per file:
+Here, not is the pattern we’re searching for. The grep command searches through the file, looking for matches to the pattern specified. To use it type grep, then the pattern we’re searching for and finally the name of the file (or files) we’re searching in.
 
-```shell
-$ wc -l *.pdb
-  20  cubane.pdb
-  12  ethane.pdb
-   9  methane.pdb
-  30  octane.pdb
-  21  pentane.pdb
-  15  propane.pdb
- 107  total
- ```
- 
- ------
- 
-Nelle’s Pipeline: Checking Files
-Nelle has run her samples through the assay machines and created 17 files in the north-pacific-gyre/2012-07-03 directory described earlier. As a quick sanity check, starting from her home directory, Nelle types:
+The output is the three lines in the file that contain the letters ‘not’.
+
+By default, grep searches for a pattern in a case-sensitive way. In addition, the search pattern we have selected does not have to form a complete word, as we will see in the next example.
+
+Let’s search for the pattern: ‘The’.
 
 ```shell
-$ cd north-pacific-gyre/2012-07-03
-$ wc -l *.txt
+$ grep The haiku.txt
+The Tao that is seen
+"My Thesis" not found.
 ```
- 
-By convention, her lab uses ‘Z’ to indicate samples with missing information. Can you find any samples with missing information?
+This time, two lines that include the letters ‘The’ are outputted, one of which contained our search pattern within a larger word, ‘Thesis’.
+
+grep’s real power doesn’t come from its options, though; it comes from the fact that patterns can include regular expressions, or wildcards.
+
+* is a wildcard, which matches zero or more characters. Let’s consider the data-shell/molecules directory: *.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. On the other hand, p*.pdb only matches pentane.pdb and propane.pdb, because the ‘p’ at the front only matches filenames that begin with the letter ‘p’.
+
+? is also a wildcard, but it matches exactly one character. So ?ethane.pdb would match methane.pdb whereas *ethane.pdb matches both ethane.pdb, and methane.pdb.
+
+Wildcards can be used in combination with each other e.g. ???ane.pdb matches three characters followed by ane.pdb, giving cubane.pdb ethane.pdb octane.pdb.
+
+When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the command that was asked for. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is. For example typing ls *.pdf in the molecules directory (which contains only files with names ending with .pdb) results in an error message that there is no file called *.pdf. However, generally commands like wc and ls see the lists of file names matching these expressions, but not the wildcards themselves. It is the shell, not the other programs, that deals with expanding wildcards, and this is another example of orthogonal design.
 
 ```shell
- $ ls *Z.txt
- NENE01971Z.txt    NENE02040Z.txt
- ```
- 
-Sure enough, when she checks the log on her laptop, there’s no depth recorded for either of those samples. Since it’s too late to get the information any other way, she must exclude those two files from her analysis. She could delete them using rm, but there are actually some analyses she might do later where depth doesn’t matter, so instead, she’ll have to be careful later on to select files using the wildcard expression *[AB].txt. As always, the * matches any number of characters; the expression [AB] matches either an ‘A’ or a ‘B’, so this matches all the valid data files she has.
- 
-[Loops](/CLworkshop/Toolkit4/)
+$ grep -E '^.o' haiku.txt
+```
+
+
+
+[Pipes and Filters](/CLworkshop/Toolkit4/)
