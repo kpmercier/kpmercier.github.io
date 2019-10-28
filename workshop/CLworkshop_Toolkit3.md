@@ -4,6 +4,9 @@ title: Commandline Workshop - Toolkit3
 permalink: /CLworkshop/Toolkit3/
 ---
 
+__Task Answer__
+
+1. mv statstics.txt statistics.txt
 
 ### _Finding Things_
 
@@ -72,4 +75,4 @@ __Use the help option for grep to figure out what option too add to this input _
 ___and the presence of absence:___
 
 
-[Pipes and Filters](/CLworkshop/Toolkit4/)
+[Task Answer & Next Module](/CLworkshop/Toolkit4/)
