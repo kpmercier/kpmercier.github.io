@@ -116,7 +116,9 @@ ls: cannot access 'quotes.txt': No such file or directory
 ```
 ------
 
-__Suppose that you created a file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt
+__Task
+
+Suppose that you created a file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt
 
 After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?__
 
