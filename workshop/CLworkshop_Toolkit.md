@@ -110,4 +110,4 @@ $ ls north-pacific-gyre/
 
 If she presses Tab again, Bash will add 2012-07-03/ to the command, since it’s the only possible completion. Pressing Tab again does nothing, since there are 19 possibilities; pressing Tab twice brings up a list of all the files, and so on. This is called tab completion, and we will see it in many other tools as we go on.
 
-[Next: Working with Files](Toolkit2/)
+[Next: Working with Files](/CLworkshop/Toolkit2/)
