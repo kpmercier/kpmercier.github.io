@@ -32,6 +32,8 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 > do
 >    head -n 2 $filename | tail -n 1
 > done
+```
+```
 CLASSIFICATION: basiliscus vulgaris
 CLASSIFICATION: bos hominus
 CLASSIFICATION: equus monoceros
@@ -66,7 +68,7 @@ $ cp basilisk.dat minotaur.dat unicorn.dat original-*.dat
 
 This wouldn’t back up our files, instead we get an error:
 
-```shell
+```
 cp: target `original-*.dat' is not a directory
 ```
 
@@ -107,7 +109,7 @@ __Task__
 
 You and your friend, having just finished reading Little Women by Louisa May Alcott, are in an argument. Of the four sisters in the book, Jo, Meg, Beth, and Amy, your friend thinks that Jo was the most mentioned. You, however, are certain it was Amy. Luckily, you have a file LittleWomen.txt containing the full text of the novel (data-shell/writing/data/LittleWomen.txt). Using a for loop, how would you tabulate the number of times each of the four sisters is mentioned?
 
-__Task Answer__
+__Solution__
 
 
 ```shell
@@ -132,5 +134,68 @@ This solution is inferior because grep -c only reports the number of lines match
 
 Perceptive observers may have noticed that character names sometimes appear in all-uppercase in chapter titles (e.g. ‘MEG GOES TO VANITY FAIR’). If you wanted to count these as well, you could add the -i option for case-insensitivity (though in this case, it doesn’t affect the answer to which sister is mentioned most frequently).
 
+---
+
+__Nelle’s Pipeline: Processing Files__
+Nelle is now ready to process her data files using goostats — a shell script written by her supervisor. This calculates some statistics from a protein sample file, and takes two arguments:
+
+an input file (containing the raw data)
+
+an output file (to store the calculated statistics)
+
+Since she’s still learning how to use the shell, she decides to build up the required commands in stages. Her first step is to make sure that she can select the right input files — remember, these are ones whose names end in ‘A’ or ‘B’, rather than ‘Z’. Starting from her home directory, Nelle types:
+
+```shell
+$ cd north-pacific-gyre/2012-07-03
+$ for datafile in NENE*[AB].txt
+> do
+>     echo $datafile
+> done
+```
+```
+NENE01729A.txt
+NENE01729B.txt
+NENE01736A.txt
+...
+NENE02043A.txt
+NENE02043B.txt
+```
+
+Her next step is to decide what to call the files that the goostats analysis program will create. Prefixing each input file’s name with ‘stats’ seems simple, so she modifies her loop to do that:
+
+```shell
+$ for datafile in NENE*[AB].txt
+> do
+>     echo $datafile stats-$datafile
+> done
+```
+```
+NENE01729A.txt stats-NENE01729A.txt
+NENE01729B.txt stats-NENE01729B.txt
+NENE01736A.txt stats-NENE01736A.txt
+...
+NENE02043A.txt stats-NENE02043A.txt
+NENE02043B.txt stats-NENE02043B.txt
+```
+
+She hasn’t actually run goostats yet, but now she’s sure she can select the right files and generate the right output filenames.
+
+Typing in commands over and over again is becoming tedious, though, and Nelle is worried about making mistakes, so instead of re-entering her loop, she presses the up arrow. In response, the shell redisplays the whole loop on one line (using semi-colons to separate the pieces):
+
+```shell
+$ for datafile in NENE*[AB].txt; do echo $datafile stats-$datafile; done
+```
+
+Using the left arrow key, Nelle backs up and changes the command echo to bash goostats:
+
+```shell
+$ for datafile in NENE*[AB].txt; do bash goostats $datafile stats-$datafile; done
+```
+
+When she presses Enter, the shell runs the modified command. However, nothing appears to happen — there is no output. After a moment, Nelle realizes that since her script doesn’t print anything to the screen any longer, she has no idea whether it is running, much less how quickly. She kills the running command by typing Ctrl-C, uses up-arrow to repeat the command, and edits it to read:
+
+```shell
+$ for datafile in NENE*[AB].txt; do echo $datafile; bash goostats $datafile stats-$datafile; done
+```
 
 [Next Module: Shell Scripts](/CLworkshop/Toolkit6)
