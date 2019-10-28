@@ -34,6 +34,10 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 > done
 ```
 
+------
+
+__Task__
+
 __You and your friend, having just finished reading Little Women by Louisa May Alcott, are in an argument. Of the four sisters in the book, Jo, Meg, Beth, and Amy, your friend thinks that Jo was the most mentioned. You, however, are certain it was Amy. Luckily, you have a file LittleWomen.txt containing the full text of the novel (data-shell/writing/data/LittleWomen.txt). Using a for loop, how would you tabulate the number of times each of the four sisters is mentioned?__
 
 
