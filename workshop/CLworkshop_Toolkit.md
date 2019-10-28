@@ -66,9 +66,9 @@ Some of its output is about properties that we do not cover in this lesson (such
 
 __Solution__
 
----
-
 The -l option makes ls use a long listing format, showing not only the file/directory names but also additional information such as the file size and the time of its last modification. If you use both the -h option and the -l option, this makes the file size ‘human readable’, i.e. displaying something like 5.3K instead of 5369.
+
+===
 
 Second, we can actually change our location to a different directory, so we are no longer located in our home directory.
 
