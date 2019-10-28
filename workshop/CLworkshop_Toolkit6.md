@@ -29,6 +29,8 @@ Once we have saved the file, we can ask the shell to execute the commands it con
 
 ```shell
 $ bash middle.sh
+```
+```
 ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
@@ -54,6 +56,8 @@ Inside a shell script, $1 means ‘the first filename (or other argument) on the
 
 ```shell
 $ bash middle.sh octane.pdb
+```
+```
 ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
@@ -65,6 +69,8 @@ or on a different file like this:
 
 ```shell
 $ bash middle.sh pentane.pdb
+```
+```
 ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
@@ -76,6 +82,8 @@ We still need to edit middle.sh each time we want to adjust the range of lines, 
 
 ```shell
 $ nano middle.sh
+```
+```
 head -n "$2" "$1" | tail -n "$3"
 ```
 
@@ -83,6 +91,8 @@ We can now run:
 
 ```shell
 $ bash middle.sh pentane.pdb 15 5
+```
+```
 ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
@@ -94,6 +104,8 @@ By changing the arguments to our command we can change our script’s behaviour:
 
 ```shell
 $ bash middle.sh pentane.pdb 20 5
+```
+```
 ATOM     14  H           1      -1.259   1.420   0.112  1.00  0.00
 ATOM     15  H           1      -2.608  -0.407   1.130  1.00  0.00
 ATOM     16  H           1      -2.540  -1.303  -0.404  1.00  0.00
@@ -107,6 +119,8 @@ This works, but it may take the next person who reads middle.sh a moment to figu
 $ nano middle.sh
 # Select lines from the middle of a file.
 # Usage: bash middle.sh filename end_line num_lines
+```
+```
 head -n "$2" "$1" | tail -n "$3"
 ```
 
@@ -129,6 +143,8 @@ wc -l "$@" | sort -n
 
 ```shell
 $ bash sorted.sh *.pdb ../creatures/*.dat
+```
+```
 9 methane.pdb
 12 ethane.pdb
 15 propane.pdb
@@ -141,13 +157,13 @@ $ bash sorted.sh *.pdb ../creatures/*.dat
 596 total
 ```
 
-------
+---
 
 __Task__
 
 Leah has several hundred data files, each of which is formatted like this:
 
-```shell
+```
 2013-11-05,deer,5
 2013-11-05,rabbit,22
 2013-11-05,raccoon,7
@@ -164,7 +180,7 @@ We can use the command cut -d , -f 2 animals.txt | sort | uniq to produce the un
 
 Write a shell script called species.sh that takes any number of filenames as command-line arguments, and uses a variation of the above command to print a list of the unique species appearing in each of those files separately.
 
-__Task Answer__
+__Solution__
 
 ```shell
 # Script to find unique species in csv files where species is the second data field
@@ -178,6 +194,54 @@ do
 	cut -d , -f 2 $file | sort | uniq
 done
 ```
+
+---
+
+__Nelle’s Pipeline: Creating a Script__
+Nelle wants to make sure her analytics are reproducible. The easiest way to capture all the steps is in a script.
+
+First we return to Nelle’s data directory:
+
+```shell
+$ cd ../north-pacific-gyre/2012-07-03/
+```
+
+She runs the editor and writes the following:
+
+```shell
+# Calculate stats for data files.
+for datafile in "$@"
+do
+    echo $datafile
+    bash goostats $datafile stats-$datafile
+done
+```
+She saves this in a file called do-stats.sh so that she can now re-do the first stage of her analysis by typing:
+
+```shell
+$ bash do-stats.sh NENE*[AB].txt
+```
+
+She can also do this:
+
+```shell
+$ bash do-stats.sh NENE*[AB].txt | wc -l
+```
+so that the output is just the number of files processed rather than the names of the files that were processed.
+
+One thing to note about Nelle’s script is that it lets the person running it decide what files to process. She could have written it as:
+
+```shell
+# Calculate stats for Site A and Site B data files.
+for datafile in NENE*[AB].txt
+do
+    echo $datafile
+    bash goostats $datafile stats-$datafile
+done
+```
+
+The advantage is that this always selects the right files: she doesn’t have to remember to exclude the ‘Z’ files. The disadvantage is that it always selects just those files — she can’t run it on all files (including the ‘Z’ files), or on the ‘G’ or ‘H’ files her colleagues in Antarctica are producing, without editing the script. If she wanted to be more adventurous, she could modify her script to check for command-line arguments, and use NENE*[AB].txt if none were provided.
+
 
 [Resources](/CLworkshop/Resources/)
 
