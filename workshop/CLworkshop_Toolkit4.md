@@ -55,5 +55,90 @@ $ wc -l *.pdb
   15  propane.pdb
  107  total
  ```
+We can also use -w to get only the number of words, or -c to get only the number of characters.
  
+Which of these files contains the fewest lines? It’s an easy question to answer when there are only six files, but what if there were 6000? Our first step toward a solution is to run the command:
+
+```shell
+$ wc -l *.pdb > lengths.txt
+```
+
+The greater than symbol, >, tells the shell to redirect the command’s output to a file instead of printing it to the screen. (This is why there is no screen output: everything that wc would have printed has gone into the file lengths.txt instead.) The shell will create the file if it doesn’t exist. If the file exists, it will be silently overwritten, which may lead to data loss and thus requires some caution. ls lengths.txt confirms that the file exists:
+
+```shell
+$ ls lengths.txt
+lengths.txt
+```
+
+We can now send the content of lengths.txt to the screen using cat lengths.txt. The cat command gets its name from ‘concatenate’ i.e. join together, and it prints the contents of files one after another. There’s only one file in this case, so cat just shows us what it contains:
+
+```shell
+$ cat lengths.txt
+  20  cubane.pdb
+  12  ethane.pdb
+   9  methane.pdb
+  30  octane.pdb
+  21  pentane.pdb
+  15  propane.pdb
+ 107  total
+ ```
+ Now let’s use the sort command to sort its contents.
+ 
+ ```shell
+$ sort -n lengths.txt
+ 9  methane.pdb
+ 12  ethane.pdb
+ 15  propane.pdb
+ 20  cubane.pdb
+ 21  pentane.pdb
+ 30  octane.pdb
+107  total
+```
+
+We can put the sorted list of lines in another temporary file called sorted-lengths.txt by putting > sorted-lengths.txt after the command, just as we used > lengths.txt to put the output of wc into lengths.txt. Once we’ve done that, we can run another command called head to get the first few lines in sorted-lengths.txt:
+
+```shell
+$ sort -n lengths.txt > sorted-lengths.txt
+$ head -n 1 sorted-lengths.txt
+  9  methane.pdb
+```
+
+If you think this is confusing, you’re in good company: even once you understand what wc, sort, and head do, all those intermediate files make it hard to follow what’s going on. We can make it easier to understand by running sort and head together:
+
+```shell
+$ sort -n lengths.txt | head -n 1
+  9  methane.pdb
+```
+
+The vertical bar, |, between the two commands is called a pipe. It tells the shell that we want to use the output of the command on the left as the input to the command on the right.
+
+Nothing prevents us from chaining pipes consecutively. That is, we can for example send the output of wc directly to sort, and then the resulting output to head. Thus we first use a pipe to send the output of wc to sort:
+
+```shell
+$ wc -l *.pdb | sort -n | head -n 1
+   9  methane.pdb
+```
+------
+
+__Task__
+
+A file called animals.txt (in the data-shell/data folder) contains the following data:
+
+2012-11-05,deer
+2012-11-05,rabbit
+2012-11-05,raccoon
+2012-11-06,rabbit
+2012-11-06,deer
+2012-11-06,fox
+2012-11-07,rabbit
+2012-11-07,bear
+
+What text passes through each of the pipes and the final redirect in the pipeline below?
+
+```shell
+$ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
+```
+
+Hint: build the pipeline up one command at a time to test your understanding
+
 [Task Answer & Next Module](/CLworkshop/Toolkit5/)
