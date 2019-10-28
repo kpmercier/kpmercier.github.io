@@ -81,7 +81,7 @@ $ grep -n "it" haiku.txt
 
 __Task__
 
-Which lines of the haiku contain the word the?
+Which lines of the haiku contain the word 'the'?
 
 __Solution__
 
@@ -95,7 +95,7 @@ $ grep -n -w "the" haiku.txt
 6:and the presence of absence:
 ```
 
-We find that The is on lines 2 and 6!
+We find that 'the' is on lines 2 and 6!
 
 ---
 
