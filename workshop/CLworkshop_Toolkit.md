@@ -116,9 +116,9 @@ Starting from _/Users/amanda/data_, what command could Amanda use to navigate to
 
 __Solution__
 
-1. ~        stands for the user’s home directory, in this case /Users/amanda.
+1. cd ~    stands for the user’s home directory, in this case /Users/amanda.
 2. cd ..    Change directory to parent directory
-3. cd       Shortcut for #3
+3. cd       Shortcut for #1
 4. cd ~/data/..    Extra complication, but okay!
 
 ---
