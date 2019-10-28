@@ -44,23 +44,4 @@ $ wc -l *.pdb
  107  total
  ```
  
- ------
- 
-Nelle’s Pipeline: Checking Files
-Nelle has run her samples through the assay machines and created 17 files in the north-pacific-gyre/2012-07-03 directory described earlier. As a quick sanity check, starting from her home directory, Nelle types:
-
-```shell
-$ cd north-pacific-gyre/2012-07-03
-$ wc -l *.txt
-```
- 
-By convention, her lab uses ‘Z’ to indicate samples with missing information. Can you find any samples with missing information?
-
-```shell
- $ ls *Z.txt
- NENE01971Z.txt    NENE02040Z.txt
- ```
- 
-Sure enough, when she checks the log on her laptop, there’s no depth recorded for either of those samples. Since it’s too late to get the information any other way, she must exclude those two files from her analysis. She could delete them using rm, but there are actually some analyses she might do later where depth doesn’t matter, so instead, she’ll have to be careful later on to select files using the wildcard expression *[AB].txt. As always, the * matches any number of characters; the expression [AB] matches either an ‘A’ or a ‘B’, so this matches all the valid data files she has.
- 
 [Loops](/CLworkshop/Toolkit5/)
