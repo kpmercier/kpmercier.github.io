@@ -102,6 +102,20 @@ thesis_backup:
 quotations.txt
 ```
 
+---
+
+__Task__
+
+Suppose that you created a file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt
+
+After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?
+
+__Solution__
+
+1. mv statstics.txt statistics.txt
+
+---
+
 Returning to the data-shell directory, let’s tidy up this directory by removing the quotes.txt file we created. The Unix command we’ll use for this is rm (short for ‘remove’):
 
 ```shell
@@ -114,17 +128,38 @@ We can confirm the file has gone using ls:
 $ ls quotes.txt
 ls: cannot access 'quotes.txt': No such file or directory
 ```
-------
+
+---
 
 __Task__
 
-__Suppose that you created a file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt__
+For this exercise, you can test the commands in the data-shell/data directory.
 
-__After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?__
+In the example below, what does cp do when given several filenames and a directory name?
 
+```shell
+$ mkdir backup
+$ cp amino-acids.txt animals.txt backup/
+```
 
-__Task Answer__
+In the example below, what does cp do when given three or more file names?
 
-1. mv statstics.txt statistics.txt
+```shell
+$ ls
+amino-acids.txt  animals.txt  backup/  elements/  morse.txt  pdb/  planets.txt  salmon.txt  sunspot.txt
+$ cp amino-acids.txt animals.txt morse.txt
+```
+
+__Solution__
+
+If given more than one file name followed by a directory name (i.e. the destination directory must be the last argument), cp copies the files to the named directory.
+
+If given three file names, cp throws an error such as the one below, because it is expecting a directory name as the last argument.
+
+```shell
+cp: target ‘morse.txt’ is not a directory
+```
+
+---
 
 [Next Module: Finding Things](/CLworkshop/Toolkit3/)
