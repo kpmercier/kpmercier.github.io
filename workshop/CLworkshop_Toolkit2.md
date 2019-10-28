@@ -10,7 +10,7 @@ Let’s go back to our data-shell directory and use ls to see what it contains:
 
 ```shell
 $ pwd
-/Users/nelle/Desktop/data-shell
+/Users/Katie/Desktop/data-shell
 $ ls
 creatures  data  molecules  north-pacific-gyre  notes.txt  pizza.cfg  solar.pdf  writing
 ```
