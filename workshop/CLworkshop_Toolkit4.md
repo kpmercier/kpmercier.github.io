@@ -141,4 +141,16 @@ $ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
 
 Hint: build the pipeline up one command at a time to test your understanding
 
-[Task Answer & Next Module](/CLworkshop/Toolkit5/)
+
+__Task Answer__
+
+The head command extracts the first 5 lines from animals.txt. Then, the last 3 lines are extracted from the previous 5 by using the tail command. With the sort -r command those 3 lines are sorted in reverse order and finally, the output is redirected to a file final.txt. The content of this file can be checked by executing cat final.txt. The file should contain the following lines:
+
+```shell
+2012-11-06,rabbit
+2012-11-06,deer
+2012-11-05,raccoon
+```
+
+
+[Next Module: Loops](/CLworkshop/Toolkit5/)
