@@ -65,9 +65,11 @@ When the shell sees a wildcard, it expands the wildcard to create a list of matc
 
 ------
 
-__Use the help option for grep to figure out what option too add to this input _grep "of" haiku.txt_ to get the following output:
+__Task__
 
-_and the presence of absence:_ __
+__Use the help option for grep to figure out what option too add to this input _grep "of" haiku.txt_ to get the following output:__
+
+___and the presence of absence:___
 
 
 [Pipes and Filters](/CLworkshop/Toolkit4/)
