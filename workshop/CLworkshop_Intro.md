@@ -23,6 +23,7 @@ While GUIs are intuitive and work well most of the time, imagine the following s
 Today, we will be using a Unix-based command line, used on Mac and Linux computers. Windows computers use a slightly different language for their command line, but the skills we learn should be transferable. Skills we will cover in this workshop include: navigating & creating folders; listing, searching & moving batches of files; editing & running shell scripts.
 
 __Nelle’s Pipeline: A Typical Problem__
+
 Nelle Nemo, a marine biologist, has just returned from a six-month survey of the North Pacific Gyre, where she has been sampling gelatinous marine life in the Great Pacific Garbage Patch. She has 1520 samples that she’s run through an assay machine to measure the relative abundance of 300 proteins. She needs to run these 1520 files through a program called goostats. On top of this huge task, she has to write up results by the end of the month so her paper can appear in a special issue of Aquatic Goo Letters.
 
 The bad news is that if she has to run goostats by hand using a GUI, she’ll have to select and open a file 1520 times. If goostats takes 1 minute to run each file, the whole process will take more than 24 hours of Nelle’s attention! With the shell, Nelle can instead assign her computer this mundane task while she focuses her attention on writing her paper.
