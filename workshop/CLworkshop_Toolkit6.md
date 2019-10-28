@@ -156,7 +156,11 @@ $ bash sorted.sh *.pdb ../creatures/*.dat
 163 ../creatures/basilisk.dat
 163 ../creatures/minotaur.dat
 163 ../creatures/unicorn.dat
-596 total
+163 ../creatures/original-basilisk.dat
+163 ../creatures/original-minotaur.dat
+163 ../creatures/original-unicorn.dat
+163 ../creatures/unicorn.dat
+1085 total
 ```
 
 ---
@@ -205,7 +209,7 @@ Nelle wants to make sure her analytics are reproducible. The easiest way to capt
 First we return to Nelle’s data directory:
 
 ```shell
-$ cd ../north-pacific-gyre/2012-07-03/
+$ cd ~/Desktop/data-shell/north-pacific-gyre/2012-07-03
 ```
 
 She runs the editor and writes the following:
