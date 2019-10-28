@@ -4,14 +4,6 @@ title: Commandline Workshop - Toolkit2
 permalink: /CLworkshop/Toolkit2/
 ---
 
-__Task Answers__
-
-1. ~        stands for the user’s home directory, in this case /Users/amanda.
-2. cd ..    Change directory to parent directory
-3. cd       Shortcut for #3
-4. cd ~/data/..    Extra complication, but okay!
-
-
 ### _Working with files and folders_
 
 Let’s go back to our data-shell directory and use ls to see what it contains:
@@ -130,4 +122,9 @@ __Suppose that you created a file in your current directory to contain a list of
 
 __After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?__
 
-[Task Answer & Next Module](/CLworkshop/Toolkit3/)
+
+__Task Answer__
+
+1. mv statstics.txt statistics.txt
+
+[Next Module: Finding Things](/CLworkshop/Toolkit3/)
