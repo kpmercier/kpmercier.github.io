@@ -4,6 +4,14 @@ title: Commandline Workshop - Toolkit2
 permalink: /CLworkshop/Toolkit2/
 ---
 
+__Task Answers__
+
+1. ~        stands for the user’s home directory, in this case /Users/amanda.
+2. cd ..    Change directory to parent directory
+3. cd       Shortcut for #3
+4. cd ~/data/..    Extra complication, but okay!
+
+
 ### _Working with files and folders_
 
 Let’s go back to our data-shell directory and use ls to see what it contains:
