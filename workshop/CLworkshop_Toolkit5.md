@@ -4,7 +4,7 @@ title: Commandline Workshop - Toolkit5
 permalink: /CLworkshop/Toolkit5/
 ---
 
-### _Loops_
+### __Loops__
 
 Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
 
