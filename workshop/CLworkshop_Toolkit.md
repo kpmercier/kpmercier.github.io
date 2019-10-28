@@ -84,6 +84,15 @@ $ pwd
 
 __Task__
 
-__Starting from _/Users/amanda/data_, what command could Amanda use to navigate to her home directory, which is _/Users/amanda?___
+Starting from _/Users/amanda/data_, what command could Amanda use to navigate to her home directory, which is _/Users/amanda?_
 
-[Task Answer & Next Module](/CLworkshop/Toolkit2/)
+__Task Answers__
+
+1. ~        stands for the user’s home directory, in this case /Users/amanda.
+2. cd ..    Change directory to parent directory
+3. cd       Shortcut for #3
+4. cd ~/data/..    Extra complication, but okay!
+
+
+
+[Next Module: Working with Files and Folders](/CLworkshop/Toolkit2/)
