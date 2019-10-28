@@ -220,21 +220,21 @@ __Solution__
 
 
 ```shell
-for sis in Jo Meg Beth Amy
-do
-	echo $sis:
-	grep -ow $sis LittleWomen.txt | wc -l
-done
+$ for sis in Jo Meg Beth Amy
+> do
+>	echo $sis:
+>	grep -ow $sis LittleWomen.txt | wc -l
+> done
 ```
 
 Alternative, slightly inferior solution:
 
 ```shell
-for sis in Jo Meg Beth Amy
-do
-	echo $sis:
-	grep -ocw $sis LittleWomen.txt
-done
+$ for sis in Jo Meg Beth Amy
+> do
+>	echo $sis:
+>	grep -ocw $sis LittleWomen.txt
+> done
 ```
 
 This solution is inferior because grep -c only reports the number of lines matched. The total number of matches reported by this method will be lower if there is more than one match per line.
