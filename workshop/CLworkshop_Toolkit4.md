@@ -16,7 +16,7 @@ octane.pdb    pentane.pdb   propane.pdb
 
 Let’s go into that directory with cd and run the command wc *.pdb. wc is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).
 
-The * in *.pdb matches zero or more characters, so the shell turns *.pdb into a list of all .pdb files in the current directory:
+The \* in \*.pdb matches zero or more characters, so the shell turns \*.pdb into a list of all .pdb files in the current directory:
 
 ```shell
 $ cd molecules
