@@ -21,6 +21,8 @@ The \* in \*.pdb matches zero or more characters, so the shell turns \*.pdb into
 ```shell
 $ cd molecules
 $ wc *.pdb
+```
+```
   20  156  1158  cubane.pdb
   12  84   622   ethane.pdb
    9  57   422   methane.pdb
@@ -35,6 +37,8 @@ If we run wc -l instead of just wc, the output shows only the number of lines pe
 
 ```shell
 $ wc -l *.pdb
+```
+```
   20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
@@ -55,6 +59,8 @@ The greater than symbol, >, tells the shell to redirect the command’s output t
 
 ```shell
 $ ls lengths.txt
+```
+```
 lengths.txt
 ```
 
@@ -62,6 +68,8 @@ We can now send the content of lengths.txt to the screen using cat lengths.txt. 
 
 ```shell
 $ cat lengths.txt
+```
+```
   20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
@@ -74,6 +82,8 @@ $ cat lengths.txt
  
  ```shell
 $ sort -n lengths.txt
+```
+```
  9  methane.pdb
  12  ethane.pdb
  15  propane.pdb
@@ -88,6 +98,8 @@ We can put the sorted list of lines in another temporary file called sorted-leng
 ```shell
 $ sort -n lengths.txt > sorted-lengths.txt
 $ head -n 1 sorted-lengths.txt
+```
+```
   9  methane.pdb
 ```
 
@@ -95,6 +107,8 @@ If you think this is confusing, you’re in good company: even once you understa
 
 ```shell
 $ sort -n lengths.txt | head -n 1
+```
+```
   9  methane.pdb
 ```
 
@@ -104,9 +118,11 @@ Nothing prevents us from chaining pipes consecutively. That is, we can for examp
 
 ```shell
 $ wc -l *.pdb | sort -n | head -n 1
+```
+```
    9  methane.pdb
 ```
-------
+---
 
 __Task__
 
@@ -130,7 +146,7 @@ $ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
 Hint: build the pipeline up one command at a time to test your understanding
 
 
-__Task Answer__
+__Solution__
 
 The head command extracts the first 5 lines from animals.txt. Then, the last 3 lines are extracted from the previous 5 by using the tail command. With the sort -r command those 3 lines are sorted in reverse order and finally, the output is redirected to a file final.txt. The content of this file can be checked by executing cat final.txt. The file should contain the following lines:
 
@@ -139,6 +155,6 @@ The head command extracts the first 5 lines from animals.txt. Then, the last 3 l
 2012-11-06,deer
 2012-11-05,raccoon
 ```
-
+---
 
 [Next Module: Loops](/CLworkshop/Toolkit5/)
