@@ -76,10 +76,10 @@ When run in the molecules directory, which ls command(s) will produce this outpu
 ethane.pdb methane.pdb
 ``` 
 
-1. ls *t*ane.pdb
-2. ls *t?ne.*
-3. ls *t??ne.pdb
-4. ls ethane.*
+1. ls \*t\*ane.pdb
+2. ls \*t?ne.\*
+3. ls \*t??ne.pdb
+4. ls ethane.\*
 
 
 [Task Answer & Next Module](/CLworkshop/Toolkit4/)
