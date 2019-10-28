@@ -42,5 +42,3 @@ __You and your friend, having just finished reading Little Women by Louisa May A
 
 
 [Shell Scripts](/CLworkshop/Toolkit6)
-
-### _Shell scripts_
