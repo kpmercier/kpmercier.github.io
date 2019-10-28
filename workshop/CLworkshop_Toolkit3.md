@@ -4,7 +4,7 @@ title: Commandline Workshop - Toolkit3
 permalink: /CLworkshop/Toolkit3/
 ---
 
-### _Finding Things_
+### __Finding Things__
 
 In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
 
