@@ -4,242 +4,80 @@ title: Commandline Workshop - Toolkit2
 permalink: /CLworkshop/Toolkit2
 ---
 
-### _Working with files_
-
-First, we are going to use the command line to download some files we will use in the rest of this workshop
+Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
 
 ```shell
-# Download a zipped file named "data.zip" from the internet
-$ wget kpmercier.github.io/workshop/data.zip
-
-# Unzip the "data.zip" file
-$ unzip data.zip
+$ ls molecules
+cubane.pdb    ethane.pdb    methane.pdb
+octane.pdb    pentane.pdb   propane.pdb
 ```
 
-We can use the command line to point to locations in the filesystem
+Let’s go into that directory with cd and run the command wc *.pdb. wc is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).
+
+The * in *.pdb matches zero or more characters, so the shell turns *.pdb into a list of all .pdb files in the current directory:
 
 ```shell
-# The root (top) of the entire filesystem (used for writing full paths).
-$ /
-
-# Here, in my current directory (used for writing relative paths).
-$ ./
-
-# Up one directory from my current directory (a relative path).
-$ ../
+$ cd molecules
+$ wc *.pdb
+  20  156  1158  cubane.pdb
+  12  84   622   ethane.pdb
+   9  57   422   methane.pdb
+  30  246  1828  octane.pdb
+  21  165  1226  pentane.pdb
+  15  111  825   propane.pdb
+ 107  819  6081  total
 ```
+Note that wc *.pdb also shows the total number of all lines in the last line of the output.
 
-We can use the 'ls' command we learned to see files and folders in different locations in the filesystem
-
-```shell
-# Show files and folders in your current directory
-$ ls ./
-
-# show files and folders in another location on the filesystem
-$ ls -l data/
-```
-
-_What do you think the default argument for 'ls' is?_
-
-
-
-Now, lets learn a new command to move around the filesystem
+If we run wc -l instead of just wc, the output shows only the number of lines per file:
 
 ```shell
-# move to a new location. This becomes your new cur dir.
-$ cd data/
-```
-
-_What files and folders are in the data directory_
-
-
-
-Let’s go back to our data-shell directory on the Desktop and use ls to see what it contains:
-
-```shell
-$ pwd
-$ ls
-```
-Let’s create a new directory called thesis using the command mkdir thesis (which has no output):
-
-```shell
- $ mkdir thesis
-``` 
-
-As you might guess from its name, mkdir means ‘make directory’. Since thesis is a relative path (i.e., does not have a leading slash, like /what/ever/thesis), the new directory is created in the current working directory:
-
-```shell
-$ ls
-```
-
-Since we’ve just created the thesis directory, there’s nothing in it yet:
-
-```shell
-$ ls thesis
-```
-
-Let’s change our working directory to thesis using cd, then run a text editor called Nano to create a file called draft.txt:
-
-```shell
-$ cd thesis
-$ nano.txt
-```
-
-![Nano](nano-screenshot.png)
-
-nano doesn’t leave any output on the screen after it exits, but ls now shows that we have created a file called draft.txt:
-
-```shell
-$ ls
-```
-
-Returning to the data-shell directory,
-
-```shell
-$ cd ..
-```
-
-In our thesis directory we have a file draft.txt which isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for ‘move’:
-
-```shell
-$ mv thesis/draft.txt thesis/quotes.txt
-```
-
-The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. Sure enough, ls shows us that thesis now contains one file called quotes.txt:
-
-```shell
-$ ls thesis
-```
-
-Let’s move quotes.txt into the current working directory. We use mv once again, but this time we’ll use just the name of a directory as the second argument to tell mv that we want to keep the filename, but put the file somewhere new. (This is why the command is called ‘move’.) In this case, the directory name we use is the special directory name . that we mentioned earlier.
-
-```shell
-$ mv thesis/quotes.txt .
-```
-The effect is to move the file from the directory it was in to the current working directory. ls now shows us that thesis is empty:
-
+$ wc -l *.pdb
+  20  cubane.pdb
+  12  ethane.pdb
+   9  methane.pdb
+  30  octane.pdb
+  21  pentane.pdb
+  15  propane.pdb
+ 107  total
+ ```
  
-```shell
-$ ls thesis
-```
+ ------
+ 
+ Nelle’s Pipeline: Checking Files
+ Nelle has run her samples through the assay machines and created 17 files in the north-pacific-gyre/2012-07-03 directory described earlier. As a quick sanity check, starting from her home directory, Nelle types:
 
-Further, ls with a filename or directory name as an argument only lists that file or directory. We can use this to see that quotes.txt is still in our current directory:
+ $ cd north-pacific-gyre/2012-07-03
+ $ wc -l *.txt
+ The output is 18 lines that look like this:
 
-```shell
-$ ls quotes.txt
-```
+ 300 NENE01729A.txt
+ 300 NENE01729B.txt
+ 300 NENE01736A.txt
+ 300 NENE01751A.txt
+ 300 NENE01751B.txt
+ 300 NENE01812A.txt
+ ... ...
+ Now she types this:
 
-The cp command works very much like mv, except it copies a file instead of moving it. We can check that it did the right thing using ls with two paths as arguments — like most Unix commands, ls can be given multiple paths at once:
+ $ wc -l *.txt | sort -n | head -n 5
+  240 NENE02018B.txt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+ Whoops: one of the files is 60 lines shorter than the others. When she goes back and checks it, she sees that she did that assay at 8:00 on a Monday morning — someone was probably in using the machine on the weekend, and she forgot to reset it. Before re-running that sample, she checks to see if any files have too much data:
 
-```shell
-$ cp quotes.txt thesis/quotations.txt
-$ ls quotes.txt thesis/quotations.txt
-```
+ $ wc -l *.txt | sort -n | tail -n 5
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+ Those numbers look good — but what’s that ‘Z’ doing there in the third-to-last line? All of her samples should be marked ‘A’ or ‘B’; by convention, her lab uses ‘Z’ to indicate samples with missing information. To find others like it, she does this:
 
-We can also copy a directory and all its contents by using the recursive option -r, e.g. to back up a directory:
-
-```shell
-$ cp -r thesis thesis_backup
-```
-
-We can check the result by listing the contents of both the thesis and thesis_backup directory:
-
-```shell
-$ ls thesis thesis_backup
-```
-
-Returning to the data-shell directory, let’s tidy up this directory by removing the quotes.txt file we created. The Unix command we’ll use for this is rm (short for ‘remove’):
-
-```shell
-$ rm quotes.txt
-```
-
-We can confirm the file has gone using ls:
-
-```shell
-$ ls quotes.txt
-```
-
-* is a wildcard, which matches zero or more characters. Let’s consider the data-shell/molecules directory: *.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. On the other hand, p*.pdb only matches pentane.pdb and propane.pdb, because the ‘p’ at the front only matches filenames that begin with the letter ‘p’.
-
-? is also a wildcard, but it matches exactly one character. So ?ethane.pdb would match methane.pdb whereas *ethane.pdb matches both ethane.pdb, and methane.pdb.
-
-Wildcards can be used in combination with each other e.g. ???ane.pdb matches three characters followed by ane.pdb, giving cubane.pdb ethane.pdb octane.pdb.
-
-When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the command that was asked for. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is. For example typing ls *.pdf in the molecules directory (which contains only files with names ending with .pdb) results in an error message that there is no file called *.pdf. However, generally commands like wc and ls see the lists of file names matching these expressions, but not the wildcards themselves. It is the shell, not the other programs, that deals with expanding wildcards, and this is another example of orthogonal design.
-
-[Files and Folders Exercise](FFexercise/)
-
-### _Finding Things_
-
-In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
-
-grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
-
-```shell
-$ cd
-$ cd Desktop/data-shell/writing
-$ cat haiku.txt
-```
-
-Let’s find lines that contain the word ‘not’:
-
-```shell
-$ grep not haiku.txt
-```
-Here, not is the pattern we’re searching for. The grep command searches through the file, looking for matches to the pattern specified. To use it type grep, then the pattern we’re searching for and finally the name of the file (or files) we’re searching in.
-
-The output is the three lines in the file that contain the letters ‘not’.
-
-By default, grep searches for a pattern in a case-sensitive way. In addition, the search pattern we have selected does not have to form a complete word, as we will see in the next example.
-
-Let’s search for the pattern: ‘The’.
-
-```shell
-$ grep The haiku.txt
-```
-
-grep’s real power doesn’t come from its options, though; it comes from the fact that patterns can include wildcards. (The technical name for these is regular expressions, which is what the ‘re’ in ‘grep’ stands for.) Regular expressions are both complex and powerful; if you want to do complex searches, please look at the lesson on our website. As a taster, we can find lines that have an ‘o’ in the second position like this:
-
-```shell
-$ grep -E '^.o' haiku.txt
-```
-
-
-[Finding Things exercise](FTExercise/)
-
-### _Loops_
-
-Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
-
-Suppose we have several hundred genome data files named basilisk.dat, minotaur.dat, and unicorn.dat. For this example, we’ll use the creatures directory which only has three example files, but the principles can be applied to many many more files at once.
-
-The structure of these files is the same: the common name, classification, and updated date are presented on the first three lines, with DNA sequences on the following lines. Let’s look at the files:
-
-```shell
-$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
-```
-
-We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
-
-```shell
-$ for thing in list_of_things
-> do
->     operation_using $thing    # Indentation within the loop is not required, but aids legibility
-> done
-```
-
-and we can apply this to our example like this:
-
-```shell
-$ for filename in basilisk.dat minotaur.dat unicorn.dat
-> do
->    head -n 2 $filename | tail -n 1
-> done
-```
-
-
-### _Shell scripts_
-
-
-[Resources](Resources/)
+ $ ls *Z.txt
+ NENE01971Z.txt    NENE02040Z.txt
+ Sure enough, when she checks the log on her laptop, there’s no depth recorded for either of those samples. Since it’s too late to get the information any other way, she must exclude those two files from her analysis. She could delete them using rm, but there are actually some analyses she might do later where depth doesn’t matter, so instead, she’ll have to be careful later on to select files using the wildcard expression *[AB].txt. As always, the * matches any number of characters; the expression [AB] matches either an ‘A’ or a ‘B’, so this matches all the valid data files she has.
+ 
+[Loops](Toolkit4/)
