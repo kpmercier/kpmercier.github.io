@@ -1,7 +1,7 @@
 ---
 layout: page_nohead
-title: Commandline Workshop - Toolkit5
-permalink: /CLworkshop/Toolkit5/
+title: Commandline Workshop - Toolkit6
+permalink: /CLworkshop/Toolkit6/
 ---
 
 ### _Shell scripts_
