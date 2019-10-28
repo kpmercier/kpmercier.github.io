@@ -48,6 +48,8 @@ Let’s search for the pattern: ‘The’.
 
 ```shell
 $ grep The haiku.txt
+```
+```
 The Tao that is seen
 "My Thesis" not found.
 ```
@@ -57,6 +59,8 @@ To restrict matches to lines containing the word ‘The’ on its own, we can gi
 
 ```shell
 $ grep -w The haiku.txt
+```
+```
 The Tao that is seen
 ```
 
@@ -66,6 +70,8 @@ Another useful option is -n, which numbers the lines that match:
 
 ```shell
 $ grep -n "it" haiku.txt
+```
+```
 5:With searching comes loss
 9:Yesterday it worked
 10:Today it is not working
@@ -83,6 +89,8 @@ Using the two options we've learned in combination:
 
 ```shell
 $ grep -n -w "the" haiku.txt
+```
+```
 2:Is not the true Tao, until
 6:and the presence of absence:
 ```
@@ -110,7 +118,7 @@ __Task__
 
 When run in the molecules directory, which ls command(s) will produce this output?
 
-```shell
+```
 ethane.pdb methane.pdb
 ``` 
 
