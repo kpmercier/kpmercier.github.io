@@ -28,6 +28,8 @@ In the command line, lines beginning with # are comments and are not executed. T
 ```shell
 # This is the general format of unix command line tools
 $ program -option1 -option2 argument
+```
+```
 output
 ```
 
@@ -39,6 +41,8 @@ First let’s find out where we are by running a command called pwd (which stand
 
 ```shell
 $ pwd
+```
+```
 /Users/Katie/Desktop
 ```
 
@@ -46,12 +50,16 @@ Now let’s learn the command that will let us see the contents of our own files
 
 ```shell
 $ ls
+```
+```
 data-shell  data.zip
 ```
 We can also use ls to see the contents of a different directory. 
 
 ```shell
 $ ls data-shell
+```
+```
 creatures          molecules          notes.txt           solar.pdf
 data               north-pacific-gyre pizza.cfg           writing
 ```
@@ -76,12 +84,16 @@ Second, we can actually change our location to a different directory, so we are 
 $ cd data-shell
 $ cd data
 $ pwd
+```
+```
 /Users/Katie/Desktop/data-shell/data
 ```
 We now know how to go down the directory tree, but how do we go up? We might try the following:
 
 ```shell
 $ cd data-shell
+```
+```
 -bash: cd: data-shell: No such file or directory
 ```
 But we get an error! Why is this?
@@ -93,6 +105,8 @@ There is a shortcut in the shell to move up one directory level that looks like 
 ```shell
 $ cd ..
 $ pwd
+```
+```
 /Users/Katie/Desktop/data-shell
 ```
 ---
