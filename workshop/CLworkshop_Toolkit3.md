@@ -6,15 +6,14 @@ permalink: /CLworkshop/Toolkit3/
 
 ### _Finding Things_
 
-In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
-
-grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
+In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
 
 ```shell
 $ cd
 $ cd Desktop/data-shell/writing
 $ cat haiku.txt
-
+```
+```
 The Tao that is seen
 Is not the true Tao, until
 You bring fresh toner.
@@ -32,6 +31,8 @@ Let’s find lines that contain the word ‘not’:
 
 ```shell
 $ grep not haiku.txt
+```
+```
 Is not the true Tao, until
 "My Thesis" not found
 Today it is not working
