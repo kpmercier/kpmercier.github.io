@@ -4,77 +4,63 @@ title: Commandline Workshop - Toolkit4
 permalink: /CLworkshop/Toolkit4/
 ---
 
+### _Pipes and Filters_
 
-### _Finding Things_
-
-In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
-
-grep finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:
+Now that we know a few basic commands, we can finally look at the shell’s most powerful feature: the ease with which it lets us combine existing programs in new ways. We’ll start with a directory called molecules that contains six files describing some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that specifies the type and position of each atom in the molecule.
 
 ```shell
-$ cd
-$ cd Desktop/data-shell/writing
-$ cat haiku.txt
+$ ls molecules
+cubane.pdb    ethane.pdb    methane.pdb
+octane.pdb    pentane.pdb   propane.pdb
 ```
 
-Let’s find lines that contain the word ‘not’:
+Let’s go into that directory with cd and run the command wc *.pdb. wc is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).
+
+The * in *.pdb matches zero or more characters, so the shell turns *.pdb into a list of all .pdb files in the current directory:
 
 ```shell
-$ grep not haiku.txt
+$ cd molecules
+$ wc *.pdb
+  20  156  1158  cubane.pdb
+  12  84   622   ethane.pdb
+   9  57   422   methane.pdb
+  30  246  1828  octane.pdb
+  21  165  1226  pentane.pdb
+  15  111  825   propane.pdb
+ 107  819  6081  total
 ```
-Here, not is the pattern we’re searching for. The grep command searches through the file, looking for matches to the pattern specified. To use it type grep, then the pattern we’re searching for and finally the name of the file (or files) we’re searching in.
+Note that wc *.pdb also shows the total number of all lines in the last line of the output.
 
-The output is the three lines in the file that contain the letters ‘not’.
-
-By default, grep searches for a pattern in a case-sensitive way. In addition, the search pattern we have selected does not have to form a complete word, as we will see in the next example.
-
-Let’s search for the pattern: ‘The’.
+If we run wc -l instead of just wc, the output shows only the number of lines per file:
 
 ```shell
-$ grep The haiku.txt
-```
-
-grep’s real power doesn’t come from its options, though; it comes from the fact that patterns can include wildcards. (The technical name for these is regular expressions, which is what the ‘re’ in ‘grep’ stands for.) Regular expressions are both complex and powerful; if you want to do complex searches, please look at the lesson on our website. As a taster, we can find lines that have an ‘o’ in the second position like this:
-
-```shell
-$ grep -E '^.o' haiku.txt
-```
-
-
-[Finding Things exercise](FTExercise/)
-
-### _Loops_
-
-Loops are a programming construct which allow us to repeat a command or set of commands for each item in a list. As such they are key to productivity improvements through automation. Similar to wildcards and tab completion, using loops also reduces the amount of typing required (and hence reduces the number of typing mistakes).
-
-Suppose we have several hundred genome data files named basilisk.dat, minotaur.dat, and unicorn.dat. For this example, we’ll use the creatures directory which only has three example files, but the principles can be applied to many many more files at once.
-
-The structure of these files is the same: the common name, classification, and updated date are presented on the first three lines, with DNA sequences on the following lines. Let’s look at the files:
+$ wc -l *.pdb
+  20  cubane.pdb
+  12  ethane.pdb
+   9  methane.pdb
+  30  octane.pdb
+  21  pentane.pdb
+  15  propane.pdb
+ 107  total
+ ```
+ 
+ ------
+ 
+Nelle’s Pipeline: Checking Files
+Nelle has run her samples through the assay machines and created 17 files in the north-pacific-gyre/2012-07-03 directory described earlier. As a quick sanity check, starting from her home directory, Nelle types:
 
 ```shell
-$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
+$ cd north-pacific-gyre/2012-07-03
+$ wc -l *.txt
 ```
-
-We would like to print out the classification for each species, which is given on the second line of each file. For each file, we would need to execute the command head -n 2 and pipe this to tail -n 1. We’ll use a loop to solve this problem, but first let’s look at the general form of a loop:
+ 
+By convention, her lab uses ‘Z’ to indicate samples with missing information. Can you find any samples with missing information?
 
 ```shell
-$ for thing in list_of_things
-> do
->     operation_using $thing    # Indentation within the loop is not required, but aids legibility
-> done
-```
-
-and we can apply this to our example like this:
-
-```shell
-$ for filename in basilisk.dat minotaur.dat unicorn.dat
-> do
->    head -n 2 $filename | tail -n 1
-> done
-```
-
-
-### _Shell scripts_
-
-
-[Resources](Resources/)
+ $ ls *Z.txt
+ NENE01971Z.txt    NENE02040Z.txt
+ ```
+ 
+Sure enough, when she checks the log on her laptop, there’s no depth recorded for either of those samples. Since it’s too late to get the information any other way, she must exclude those two files from her analysis. She could delete them using rm, but there are actually some analyses she might do later where depth doesn’t matter, so instead, she’ll have to be careful later on to select files using the wildcard expression *[AB].txt. As always, the * matches any number of characters; the expression [AB] matches either an ‘A’ or a ‘B’, so this matches all the valid data files she has.
+ 
+[Loops](/CLworkshop/Toolkit5/)
