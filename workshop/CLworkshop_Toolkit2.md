@@ -4,7 +4,7 @@ title: Commandline Workshop - Toolkit2
 permalink: /CLworkshop/Toolkit2/
 ---
 
-### _Working with files and folders_
+### __Working with files and folders__
 
 Let’s go back to our data-shell directory and use ls to see what it contains:
 
