@@ -1,7 +1,7 @@
 ---
 layout: page_nohead
 title: Commandline Workshop - Toolkit4
-permalink: /CLworkshop/Toolkit4
+permalink: /CLworkshop/Toolkit4/
 ---
 
 
