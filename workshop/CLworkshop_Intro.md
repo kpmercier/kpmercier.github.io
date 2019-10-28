@@ -33,4 +33,4 @@ The next few lessons will explore the ways Nelle can achieve this. More specific
 
 As a bonus, once she has put a processing pipeline together, she will be able to use it again whenever she collects more data.
 
-[Onto the toolkit!](Toolkit/)
+[Onto the toolkit!](/CLworkshop/Toolkit/)
