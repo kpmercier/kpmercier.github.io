@@ -13,8 +13,6 @@ permalink: /CLworkshop/Toolkit/
 5. Loops
 6. Shell Scripts
 
-### __Navigating Files and Folders__
-
 First, we are going to use the command line to download some files we will use in the rest of this workshop
 
 ```shell
@@ -28,7 +26,7 @@ $ unzip data.zip
 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) PDF listing common commands with short explanations
 
-------
+### __Navigating Files and Folders__
 
 In the command line, lines beginning with # are comments and are not executed. The command line is used to run programs, which may have options and arguments
 
