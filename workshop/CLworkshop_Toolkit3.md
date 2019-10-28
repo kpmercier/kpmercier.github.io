@@ -4,10 +4,6 @@ title: Commandline Workshop - Toolkit3
 permalink: /CLworkshop/Toolkit3/
 ---
 
-__Task Answer__
-
-1. mv statstics.txt statistics.txt
-
 ### _Finding Things_
 
 In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program.
