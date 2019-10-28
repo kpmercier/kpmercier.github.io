@@ -114,7 +114,7 @@ $ sort -n lengths.txt | head -n 1
   9  methane.pdb
 ```
 
-The vertical bar, |, between the two commands is called a pipe. It tells the shell that we want to use the output of the command on the left as the input to the command on the right.
+The vertical bar, \|, between the two commands is called a pipe. It tells the shell that we want to use the output of the command on the left as the input to the command on the right.
 
 Nothing prevents us from chaining pipes consecutively. That is, we can for example send the output of wc directly to sort, and then the resulting output to head. Thus we first use a pipe to send the output of wc to sort:
 
@@ -128,7 +128,7 @@ $ wc -l *.pdb | sort -n | head -n 1
 
 __Task__
 
-A file called animals.txt (in the data-shell/data folder) contains the following data:
+|A file called animals.txt (in the data-shell/data folder) contains the following data:
 
 2012-11-05,deer
 2012-11-05,rabbit
