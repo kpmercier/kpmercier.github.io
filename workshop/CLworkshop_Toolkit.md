@@ -6,12 +6,12 @@ permalink: /CLworkshop/Toolkit/
 
 ## __2. Gain a basic toolkit to start using the command line__
  
-1. [Navigating Files and Folders]
-2. [Working with Files and Folders]
-3. [Finding Things]
-4. [Pipes and Filters]
-5. [Loops]
-6. [Shell Scripts]
+1. Navigating Files and Folders
+2. Working with Files and Folders
+3. Finding Things
+4. Pipes and Filters
+5. Loops
+6. Shell Scripts
 
 ### __Navigating Files and Folders__
 
