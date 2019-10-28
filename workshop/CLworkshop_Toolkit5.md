@@ -223,21 +223,20 @@ __Solution__
 $ for sis in Jo Meg Beth Amy
 > do
 >	echo $sis:
->	grep -ow $sis LittleWomen.txt | wc -l
+>	grep -w $sis LittleWomen.txt | wc -l
 > done
 ```
+This solution is not the best because _grep -w_ and _wc -l_ only reports the number of lines matched. The total number of matches reported by this method will be lower if there is more than one match per line.
 
-Alternative, slightly inferior solution:
+Alternative solution:
 
 ```shell
 $ for sis in Jo Meg Beth Amy
 > do
 >	echo $sis:
->	grep -ocw $sis LittleWomen.txt
+>	grep -ow $sis LittleWomen.txt | wc -l
 > done
 ```
-
-This solution is inferior because grep -c only reports the number of lines matched. The total number of matches reported by this method will be lower if there is more than one match per line.
 
 Perceptive observers may have noticed that character names sometimes appear in all-uppercase in chapter titles (e.g. ‘MEG GOES TO VANITY FAIR’). If you wanted to count these as well, you could add the -i option for case-insensitivity (though in this case, it doesn’t affect the answer to which sister is mentioned most frequently).
 
