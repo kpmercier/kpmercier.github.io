@@ -28,6 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "www.kpmercier.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kpmercier
 github_username:  kpmercier
+instagram_username:kutek8
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
