@@ -21,7 +21,7 @@ University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson L
 to my <a href="Research">Research page</a> for more specifics on my work. 
 </p>
 
-<img src="/images/desk.jpg" alt="alt text" width="300" align="right">
+<img src="/images/desk.jpg" alt="alt text" width="300" align="right", border="5">
 
 </div>
 
