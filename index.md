@@ -8,9 +8,12 @@ layout: page
 <p>
 Welcome to my website! I am a biologist, interested in how organisms respond to 
 environmental change, and how we can use that information to preserve biodiversity. I am 
-especially fascinated by the <a href="images/north_american_coastal_plain.pdf">North American coastal plain</a>, 
+especially fascinated by the North American coastal plain, 
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
 </p>
+
+Check out <a href="images/north_american_coastal_plain.pdf">the Atlas for the End of the 
+World</a> for more information on the North American Coastal Plain!
 
 <br>
 
