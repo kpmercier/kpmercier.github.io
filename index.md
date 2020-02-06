@@ -5,18 +5,20 @@ layout: page
 
 <div class="col2">
 
-
+<p>
 Welcome to my website! I am a biologist, interested in how organisms respond to 
 environmental change, and how we can use that information to preserve biodiversity. I am 
 especially fascinated by the <a href="images/north_american_coastal_plain.pdf">North American coastal plain</a>, 
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
+</p>
 
-<br>
 
+<p>
 Currently, I am a PhD student in the <a href="http://www.carnavallab.org/">Carnaval Lab</a> 
 at City College of New York and CUNY Graduate Center and I received my MS from the 
 University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson Lab</a>. Head over
 to my <a href="Research">Research page</a> for more specifics on my work. 
+</p>
 
 <img src="/images/desk.jpg" alt="alt text" width="300" align="right">
 
