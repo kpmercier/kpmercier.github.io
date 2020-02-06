@@ -6,9 +6,9 @@ layout: page
 <div class="col2">
 
 <p>
-Welcome to my website! I am a biologist, interested in how organisms respond to 
+Welcome! My name is Kathryn, and I am a biologist. I am interested in how organisms respond to 
 environmental change, and how we can use that information to preserve biodiversity. I am 
-especially fascinated by the North American coastal plains, 
+especially fascinated by the North American coastal plain as 
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
 </p>
 
