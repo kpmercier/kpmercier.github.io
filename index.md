@@ -1,8 +1,9 @@
 ---
 layout: page
 ---
-
+<kbd>
 <img src="/images/desk.jpg" alt="alt text" width="350" align="right">
+<kbd>
 
 Welcome to my new website! I am a PhD student in the 
 <a href="http://www.carnavallab.org/">Carnaval Lab</a> at City College of New York and 
