@@ -8,12 +8,13 @@ layout: page
 <p>
 Welcome to my website! I am a biologist, interested in how organisms respond to 
 environmental change, and how we can use that information to preserve biodiversity. I am 
-especially fascinated by the North American coastal plain, 
+especially fascinated by the North American coastal plains, 
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
 </p>
 
-Check out <a href="images/north_american_coastal_plain.pdf">the Atlas for the End of the 
-World</a> for more information on the North American Coastal Plain!
+Check out the <a href="images/north_american_coastal_plain.pdf">Atlas for the End of the 
+World</a> for more information on the North American Coastal Plain and other biodiversity 
+hotspots.
 
 <br>
 
@@ -24,7 +25,7 @@ University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson L
 to my <a href="Research">Research page</a> for more specifics on my work. 
 </p>
 
-<img src="/images/desk.jpg" alt="alt text" width="300" align="right", border="5">
+<img src="/images/desk.jpg" alt="alt text" width="300" align="right" border="5">
 
 </div>
 
