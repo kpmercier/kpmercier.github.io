@@ -12,6 +12,7 @@ especially fascinated by the <a href="images/north_american_coastal_plain.pdf">N
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
 </p>
 
+<br>
 
 <p>
 Currently, I am a PhD student in the <a href="http://www.carnavallab.org/">Carnaval Lab</a> 
