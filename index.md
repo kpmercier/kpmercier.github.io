@@ -11,6 +11,7 @@ environmental change, and how we can use that information to preserve biodiversi
 especially fascinated by the <a href="images/north_american_coastal_plain.pdf">North American coastal plain</a>, 
 this region hosts some amazing diversity and has an intriguing biogeographic history. 
 
+
 Currently, I am a PhD student in the <a href="http://www.carnavallab.org/">Carnaval Lab</a> 
 at City College of New York and CUNY Graduate Center and I received my MS from the 
 University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson Lab</a>. Head over
