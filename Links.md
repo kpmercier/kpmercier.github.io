@@ -4,8 +4,6 @@ title: Links & other fun stuff
 permalink: /Links/
 ---
 
-<img src="/images/PCRmagic.jpg" alt="alt text" width="350" align="right">
-
 ### Workshops
 
 [Introduction to the Command Line](/CLworkshop)
