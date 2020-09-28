@@ -6,6 +6,8 @@ permalink: /Links/
 
 ### Workshops
 
+[EEB Grad School Advice Session (recording)](https://youtu.be/fVdNXax5ZWs)
+
 [Introduction to the Command Line](/CLworkshop)
 
 ### Some interesting links
