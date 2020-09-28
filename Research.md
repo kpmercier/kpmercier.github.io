@@ -5,9 +5,9 @@ permalink: /Research/
 ---
 ### Predicting the future with pawpaw
 
-![](https://youtu.be/M5PKIlbtPjk)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M5PKIlbtPjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Investigating the impact of long-term climate stability on population dynamics of two Brazilian palm trees (<i>Syagrus sp.</i>)
 
