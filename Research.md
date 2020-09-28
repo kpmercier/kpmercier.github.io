@@ -3,6 +3,10 @@ layout: page
 title: Research
 permalink: /Research/
 ---
+### Predicting the future with pawpaw
+
+![](https://youtu.be/M5PKIlbtPjk)
+
 ### Investigating the impact of long-term climate stability on population dynamics of two Brazilian palm trees (<i>Syagrus sp.</i>)
 
 We have evidence that climate change in already altering natural systems: multiple species have experienced range-shifts poleward or up-slope, while others show shifts in their phenology, and entire communities are losing or gaining members as species ranges shift. Although we can see impacts occurring now, it remains difficult to make predictions of future responses, due to uncertainty at multiple levels. One of the most powerful ways to inform predictions is to examine species responses to rapid climate change in the past. Genetic data coupled with statistical analyses form an ideal framework to make inferences of past demographic change. I propose to study the population genetics of two palm tree species in the genus *Syagrus* to do this. We have evidence to suggest that these two species have experienced different regimes of climatic stability over the past 21,000 years, and I am interested in understanding how those differences impact their historical and current demography. Specifically, I am using genome-wide data from RADseq to infer their current population structure and diversity, as well as historical changes to population size and connectivity.
