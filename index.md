@@ -9,13 +9,8 @@ layout: page
 Welcome! My name is Kathryn, and I am an ecologist interested in how organisms respond to 
 environmental change, and how we can use that information to preserve biodiversity. I am 
 especially fascinated by the North American coastal plain as 
-this region hosts some amazing diversity and has an intriguing biogeographic history. 
-</p>
-
-<br>
-
-<p>
-Check out the <a href="images/north_american_coastal_plain.pdf">Atlas for the End of the 
+this region hosts some amazing diversity and has an intriguing biogeographic history. Check out 
+the <a href="images/north_american_coastal_plain.pdf">Atlas for the End of the 
 World</a> for more information on the North American Coastal Plain and other biodiversity 
 hotspots!
 </p>
