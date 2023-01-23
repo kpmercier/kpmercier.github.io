@@ -3,7 +3,8 @@ layout: page
 title: Publications
 permalink: /Publications/
 ---
-**Mercier KP**, Baylac M, Dillon S, Medina S, Parkinson CL. The utility of traits, genes, and genomes in delimiting conservation units: A case study in Mole Skinks (*Plestiodon egregius*). Submitted to Conservation Genetics.
+
+**Mercier KP**, Vasconcellos MM, Martins EGA, Pirani JR, Michelangeli FA, Carnaval AC. 2022. Linking environmental stability with genetic diversity and population structure in two Atlantic Forest palm trees. Journal of Biogeography. https://doi.org/10.1111/jbi.14523 [PDF](Publications/2023Mercier.pdf)
 
 Jenkins DG, Ohyama L, López-Borghesi F, Hart JD, Bogotá-Gregory JD, Rautsaw RM, Correa Roldán V, Guilfoyle K, Jarvis A, Loch J, **Mercier KP**, Myers O, Shaw R, Volk D, Bard AM. 2021. Biogeography and predictors of wildlife killed on roads at peninsular Florida State Parks. Ecology and Evolution. [https://doi.org/10.1002/ece3.7743](https://doi.org/10.1002/ece3.7743){:target="_blank"} [PDF](Publications/2021Jenkins.pdf){:target="_blank"}
 
