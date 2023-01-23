@@ -4,7 +4,7 @@ title: Links & other fun stuff
 permalink: /Links/
 ---
 
-### Workshops
+### My workshops
 
 [EEB Grad School Advice Session (recording)](https://youtu.be/fVdNXax5ZWs){:target="_blank"}
 
