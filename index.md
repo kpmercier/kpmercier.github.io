@@ -7,12 +7,8 @@ layout: page
 
 <p>
 Welcome! My name is Kathryn, and I am an ecologist interested in how organisms respond to 
-environmental change and how we can use that information to preserve biodiversity. I am 
-especially fascinated by the North American coastal plain as 
-this region hosts some amazing diversity and has an intriguing biogeographic history. Check out 
-the <a href="images/north_american_coastal_plain.pdf">Atlas for the End of the 
-World</a> for more information on the North American Coastal Plain and other biodiversity 
-hotspots!
+environmental change and how we can use that information to preserve biodiversity. Head over 
+to my <a href="Research">Research page</a> for more specifics on my work.
 </p>
 
 <br>
@@ -21,8 +17,7 @@ hotspots!
 I am currently open to work in the field of Ecology in the NYC area. I am also finishing my doctoral research in 
 the <a href="http://www.carnavallab.org/">Carnaval Lab</a> 
 at City College of New York and CUNY Graduate Center and earned my MS from the 
-University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson Lab</a>. Head over
-to my <a href="Research">Research page</a> for more specifics on my work!
+University of Central Florida in the <a href="www.parkinsonlab.com/">Parkinson Lab</a>. 
 </p>
 
 <img src="/images/desk.png" alt="alt text" width="350">
